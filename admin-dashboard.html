@@ -1,0 +1,1205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Console | NexusDesk</title>
+    <link rel="stylesheet" href="admin-dashboard.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+</head>
+
+<body class="admin-body">
+
+
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+
+    <aside class="sidebar admin-sidebar" id="sidebar">
+        <a href="index.html" class="sidebar-header">
+            <img src="./assets/Stackly-Logo-White.webp" alt="logo" class="logo">
+        </a>
+
+        <nav class="sidebar-nav">
+            <button class="nav-item active" data-target="view-system">
+                <span class="material-icons-outlined">query_stats</span>
+                System Health
+            </button>
+            <button class="nav-item" data-target="view-global-queue">
+                <span class="material-icons-outlined">all_inbox</span>
+                Global Queue
+            </button>
+            <button class="nav-item" data-target="view-users">
+                <span class="material-icons-outlined">manage_accounts</span>
+                User Management
+            </button>
+            <button class="nav-item" data-target="view-audit">
+                <span class="material-icons-outlined">security</span>
+                Security & Audit
+            </button>
+        </nav>
+
+        <div class="sidebar-footer">
+            <button onclick="window.location.href='login.html'" class="nav-item text-danger">
+                <span class="material-icons-outlined">logout</span>
+                Disconnect
+            </button>
+        </div>
+    </aside>
+
+
+    <main class="main-workspace">
+        <header class="workspace-header">
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <span class="material-icons-outlined">menu</span>
+            </button>
+            <div class="header-welcome">
+                <h1>Welcome <span id="Username"></span></h1>
+            </div>
+            <div class="header-profile">
+                <button onclick="window.location.href='404page.html'" class="header-icon">
+                    <span class="material-icons-outlined">notifications</span>
+                    <span class="notification-dot"></span>
+                </button>
+
+                <div class="profile-card" id="profileCard">
+
+                    <div class="profile-avatar">
+                        A
+                    </div>
+
+                    <div class="profile-details">
+                        <h4 id="adminName">Administrator</h4>
+                        <p id="adminEmail">admin@nexusdesk.com</p>
+                    </div>
+
+                    <span class="material-icons-outlined profile-arrow">
+                        expand_more
+                    </span>
+
+                </div>
+                <div class="profile-dropdown" id="profileDropdown">
+                    <div class="dropdown-user-info">
+
+                        <div class="dropdown-avatar">
+                            A
+                        </div>
+
+                        <div class="dropdown-details">
+                            <h4 id="dropdownAdminName">Administrator</h4>
+                            <p id="dropdownAdminEmail">admin@nexusdesk.com</p>
+                        </div>
+
+                    </div>
+
+                    <hr>
+                    <a href="404page.html">
+                        <span class="material-icons-outlined">person</span>
+                        My Profile
+                    </a>
+
+                    <a href="404page.html">
+                        <span class="material-icons-outlined">settings</span>
+                        Settings
+                    </a>
+
+                    <a href="404page.html">
+                        <span class="material-icons-outlined">password</span>
+                        Change Password
+                    </a>
+
+                    <hr>
+
+                    <a href="404page.html" class="logout-link">
+                        <span class="material-icons-outlined">logout</span>
+                        Logout
+                    </a>
+
+                </div>
+            </div>
+        </header>
+
+
+        <div class="workspace-content">
+
+
+            <div id="view-system" class="view-panel active">
+                <div class="view-header">
+                    <h1>System Health</h1>
+                    <p>Global metrics, server nodes, and API traffic overview.</p>
+                </div>
+                <div class="stats-grid">
+
+                    <div class="stat-card">
+                        <span class="material-icons-outlined">groups</span>
+                        <h3>1,284</h3>
+                        <p>Active Users</p>
+                        <small>+8% from yesterday</small>
+                    </div>
+
+                    <div class="stat-card">
+                        <span class="material-icons-outlined">confirmation_number</span>
+                        <h3>342</h3>
+                        <p>Open Tickets</p>
+                        <small>18 High Priority</small>
+                    </div>
+
+                    <div class="stat-card">
+                        <span class="material-icons-outlined">timer</span>
+                        <h3>12 min</h3>
+                        <p>Avg Response</p>
+                        <small>Within SLA</small>
+                    </div>
+
+                    <div class="stat-card">
+                        <span class="material-icons-outlined">cloud_done</span>
+                        <h3>99.98%</h3>
+                        <p>System Uptime</p>
+                        <small>Last 30 days</small>
+                    </div>
+
+                </div>
+
+                <div class="dashboard-grid">
+
+                    <!-- Live Traffic -->
+                    <section class="dash-section">
+                        <div class="section-title">
+                            <h3>Live API Traffic</h3>
+                            <span class="badge success">Healthy</span>
+                        </div>
+
+                        <div class="traffic-chart">
+
+                            <div class="bar" style="height:55%"></div>
+                            <div class="bar" style="height:72%"></div>
+                            <div class="bar" style="height:64%"></div>
+                            <div class="bar" style="height:90%"></div>
+                            <div class="bar" style="height:70%"></div>
+                            <div class="bar" style="height:96%"></div>
+                            <div class="bar" style="height:78%"></div>
+
+                        </div>
+
+                        <div class="traffic-footer">
+                            <span>Current Requests</span>
+                            <strong>2,346 / min</strong>
+                        </div>
+
+                    </section>
+
+                    <!-- Infrastructure -->
+                    <section class="dash-section span-2">
+
+                        <div class="section-title">
+                            <h3>Infrastructure Status</h3>
+                            <span class="badge info">8 Servers</span>
+                        </div>
+
+                        <table class="data-table">
+
+                            <thead>
+                                <tr>
+                                    <th>Server</th>
+                                    <th>Status</th>
+                                    <th>CPU</th>
+                                    <th>Memory</th>
+                                    <th>Region</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+
+                                <tr>
+                                    <td>ND-US-01</td>
+                                    <td><span class="badge success">Online</span></td>
+                                    <td>24%</td>
+                                    <td>47%</td>
+                                    <td>US East</td>
+                                </tr>
+
+                                <tr>
+                                    <td>ND-EU-02</td>
+                                    <td><span class="badge success">Online</span></td>
+                                    <td>39%</td>
+                                    <td>62%</td>
+                                    <td>Europe</td>
+                                </tr>
+
+                                <tr>
+                                    <td>ND-AS-01</td>
+                                    <td><span class="badge success">Online</span></td>
+                                    <td>18%</td>
+                                    <td>36%</td>
+                                    <td>Asia</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Storage Cluster</td>
+                                    <td><span class="badge warning">Busy</span></td>
+                                    <td>69%</td>
+                                    <td>81%</td>
+                                    <td>Global</td>
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </section>
+
+                    <!-- SLA -->
+                    <section class="dash-section">
+
+                        <div class="section-title">
+                            <h3>SLA Performance</h3>
+                        </div>
+
+                        <div class="metric">
+                            <span>Response SLA</span>
+                            <strong>98%</strong>
+                        </div>
+
+                        <div class="progress">
+                            <span style="width:98%"></span>
+                        </div>
+
+                        <div class="metric">
+                            <span>Resolution SLA</span>
+                            <strong>94%</strong>
+                        </div>
+
+                        <div class="progress">
+                            <span style="width:94%"></span>
+                        </div>
+
+                        <div class="metric">
+                            <span>Customer Satisfaction</span>
+                            <strong>96%</strong>
+                        </div>
+
+                        <div class="progress">
+                            <span style="width:96%"></span>
+                        </div>
+
+                    </section>
+
+                    <!-- Alerts -->
+                    <section class="dash-section span-2">
+
+                        <div class="section-title">
+                            <h3>Recent System Alerts</h3>
+                        </div>
+
+                        <div class="alert-list">
+
+                            <div class="alert-item">
+                                <span class="badge warning">Warning</span>
+                                <div>
+                                    <h4>API latency exceeded threshold</h4>
+                                    <p>Gateway response time reached 580 ms.</p>
+                                </div>
+                                <small>10 mins ago</small>
+                            </div>
+
+                            <div class="alert-item">
+                                <span class="badge success">Resolved</span>
+                                <div>
+                                    <h4>Database backup completed</h4>
+                                    <p>Nightly backup finished successfully.</p>
+                                </div>
+                                <small>2 hrs ago</small>
+                            </div>
+
+                            <div class="alert-item">
+                                <span class="badge info">Info</span>
+                                <div>
+                                    <h4>Security definitions updated</h4>
+                                    <p>Firewall policies synchronized across all regions.</p>
+                                </div>
+                                <small>Today</small>
+                            </div>
+
+                            <div class="alert-item">
+                                <span class="badge danger">Critical</span>
+                                <div>
+                                    <h4>Storage utilization reached 82%</h4>
+                                    <p>Recommended to increase storage capacity.</p>
+                                </div>
+                                <small>Yesterday</small>
+                            </div>
+
+                        </div>
+
+                    </section>
+
+                </div>
+            </div>
+
+
+            <div id="view-global-queue" class="view-panel">
+                <div class="view-header">
+                    <h1>Global Queue</h1>
+                </div>
+                <div class="stats-grid">
+
+                    <div class="stat-card">
+                        <span class="material-icons-outlined">pending_actions</span>
+                        <h3>146</h3>
+                        <p>Pending Tickets</p>
+                        <small>+12 since last hour</small>
+                    </div>
+
+                    <div class="stat-card">
+                        <span class="material-icons-outlined">assignment_ind</span>
+                        <h3>82</h3>
+                        <p>Assigned</p>
+                        <small>56 agents active</small>
+                    </div>
+
+                    <div class="stat-card">
+                        <span class="material-icons-outlined">priority_high</span>
+                        <h3>19</h3>
+                        <p>Escalated</p>
+                        <small>Needs immediate attention</small>
+                    </div>
+
+                    <div class="stat-card">
+                        <span class="material-icons-outlined">task_alt</span>
+                        <h3>318</h3>
+                        <p>Resolved Today</p>
+                        <small>94% SLA achieved</small>
+                    </div>
+
+                </div>
+
+                <div class="dashboard-grid">
+
+                    <!-- Live Queue -->
+                    <section class="dash-section span-2">
+
+                        <div class="section-title">
+                            <h3>Live Ticket Queue</h3>
+
+                            <button onclick="window.location.href='404page.html'" class="action-btn">
+                                Refresh Queue
+                            </button>
+                        </div>
+
+                        <div class="table-wrapper">
+
+                            <table class="data-table">
+
+                                <thead>
+                                    <tr>
+                                        <th>Ticket ID</th>
+                                        <th>Subject</th>
+                                        <th>Department</th>
+                                        <th>Priority</th>
+                                        <th>Assigned To</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+
+                                    <tr>
+                                        <td>#ND-1048</td>
+                                        <td>Payment gateway timeout</td>
+                                        <td>Billing</td>
+                                        <td><span class="badge danger">Critical</span></td>
+                                        <td>Olivia</td>
+                                        <td><span class="badge warning">Open</span></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>#ND-1047</td>
+                                        <td>Unable to login</td>
+                                        <td>Support</td>
+                                        <td><span class="badge info">Medium</span></td>
+                                        <td>Noah</td>
+                                        <td><span class="badge success">Assigned</span></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>#ND-1046</td>
+                                        <td>Email notifications delayed</td>
+                                        <td>Infrastructure</td>
+                                        <td><span class="badge warning">High</span></td>
+                                        <td>Emma</td>
+                                        <td><span class="badge warning">In Progress</span></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>#ND-1045</td>
+                                        <td>API authentication failure</td>
+                                        <td>Engineering</td>
+                                        <td><span class="badge danger">Critical</span></td>
+                                        <td>Liam</td>
+                                        <td><span class="badge info">Escalated</span></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>#ND-1044</td>
+                                        <td>Password reset request</td>
+                                        <td>Support</td>
+                                        <td><span class="badge success">Low</span></td>
+                                        <td>Sophia</td>
+                                        <td><span class="badge success">Resolved</span></td>
+                                    </tr>
+
+                                </tbody>
+
+                            </table>
+
+                        </div>
+
+                    </section>
+
+                    <!-- Queue Distribution -->
+
+                    <section class="dash-section">
+
+                        <div class="section-title">
+                            <h3>Queue Distribution</h3>
+                        </div>
+
+                        <div class="queue-item">
+                            <span>Technical Support</span>
+                            <strong>42%</strong>
+                        </div>
+                        <div class="progress">
+                            <span style="width:42%"></span>
+                        </div>
+
+                        <div class="queue-item">
+                            <span>Billing</span>
+                            <strong>27%</strong>
+                        </div>
+                        <div class="progress">
+                            <span style="width:27%"></span>
+                        </div>
+
+                        <div class="queue-item">
+                            <span>Infrastructure</span>
+                            <strong>18%</strong>
+                        </div>
+                        <div class="progress">
+                            <span style="width:18%"></span>
+                        </div>
+
+                        <div class="queue-item">
+                            <span>Sales</span>
+                            <strong>13%</strong>
+                        </div>
+                        <div class="progress">
+                            <span style="width:13%"></span>
+                        </div>
+
+                    </section>
+
+                    <!-- Recently Assigned -->
+
+                    <section class="dash-section">
+
+                        <div class="section-title">
+                            <h3>Recently Assigned</h3>
+                        </div>
+
+                        <div class="activity-list">
+
+                            <div class="activity-item">
+                                <div class="activity-avatar">O</div>
+                                <div>
+                                    <h4>Olivia Carter</h4>
+                                    <p>Assigned Ticket #ND-1048</p>
+                                </div>
+                            </div>
+
+                            <div class="activity-item">
+                                <div class="activity-avatar">N</div>
+                                <div>
+                                    <h4>Noah Wilson</h4>
+                                    <p>Assigned Ticket #ND-1047</p>
+                                </div>
+                            </div>
+
+                            <div class="activity-item">
+                                <div class="activity-avatar">E</div>
+                                <div>
+                                    <h4>Emma Brown</h4>
+                                    <p>Assigned Ticket #ND-1046</p>
+                                </div>
+                            </div>
+
+                            <div class="activity-item">
+                                <div class="activity-avatar">L</div>
+                                <div>
+                                    <h4>Liam Davis</h4>
+                                    <p>Assigned Ticket #ND-1045</p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </section>
+
+                </div>
+            </div>
+
+
+            <div id="view-users" class="view-panel">
+                <div class="view-header">
+                    <h1>User Management</h1>
+                </div>
+                <div class="stats-grid">
+
+                    <div class="stat-card">
+                        <span class="material-icons-outlined">groups</span>
+                        <h3>8,241</h3>
+                        <p>Total Users</p>
+                        <small>+128 this month</small>
+                    </div>
+
+                    <div class="stat-card">
+                        <span class="material-icons-outlined">support_agent</span>
+                        <h3>96</h3>
+                        <p>Support Agents</p>
+                        <small>84 Online</small>
+                    </div>
+
+                    <div class="stat-card">
+                        <span class="material-icons-outlined">admin_panel_settings</span>
+                        <h3>12</h3>
+                        <p>Administrators</p>
+                        <small>All verified</small>
+                    </div>
+
+                    <div class="stat-card">
+                        <span class="material-icons-outlined">block</span>
+                        <h3>18</h3>
+                        <p>Suspended Users</p>
+                        <small>Requires review</small>
+                    </div>
+
+                </div>
+
+                <div class="dashboard-grid">
+
+                    <!-- User Directory -->
+
+                    <section class="dash-section span-2">
+
+                        <div class="section-title">
+                            <h3>User Directory</h3>
+
+                            <button onclick="window.location.href='404page.html'" class="action-btn">
+                                Add User
+                            </button>
+                        </div>
+
+                        <div class="table-wrapper">
+
+                            <table class="data-table">
+
+                                <thead>
+                                    <tr>
+                                        <th>User</th>
+                                        <th>Role</th>
+                                        <th>Department</th>
+                                        <th>Status</th>
+                                        <th>Last Login</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+
+                                    <tr>
+                                        <td>Olivia Carter</td>
+                                        <td>Administrator</td>
+                                        <td>IT Operations</td>
+                                        <td><span class="badge success">Online</span></td>
+                                        <td>2 mins ago</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Noah Wilson</td>
+                                        <td>Support Agent</td>
+                                        <td>Customer Support</td>
+                                        <td><span class="badge success">Available</span></td>
+                                        <td>8 mins ago</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Emma Brown</td>
+                                        <td>Support Manager</td>
+                                        <td>Operations</td>
+                                        <td><span class="badge info">Busy</span></td>
+                                        <td>15 mins ago</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Liam Davis</td>
+                                        <td>Support Agent</td>
+                                        <td>Infrastructure</td>
+                                        <td><span class="badge warning">Away</span></td>
+                                        <td>32 mins ago</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Sophia Miller</td>
+                                        <td>Viewer</td>
+                                        <td>Finance</td>
+                                        <td><span class="badge danger">Offline</span></td>
+                                        <td>Yesterday</td>
+                                    </tr>
+
+                                </tbody>
+
+                            </table>
+
+                        </div>
+
+                    </section>
+
+                    <!-- Roles -->
+
+                    <section class="dash-section">
+
+                        <div class="section-title">
+                            <h3>Role Distribution</h3>
+                        </div>
+
+                        <div class="queue-item">
+                            <span>Support Agents</span>
+                            <strong>72%</strong>
+                        </div>
+
+                        <div class="progress">
+                            <span style="width:72%"></span>
+                        </div>
+
+                        <div class="queue-item">
+                            <span>Managers</span>
+                            <strong>16%</strong>
+                        </div>
+
+                        <div class="progress">
+                            <span style="width:16%"></span>
+                        </div>
+
+                        <div class="queue-item">
+                            <span>Administrators</span>
+                            <strong>8%</strong>
+                        </div>
+
+                        <div class="progress">
+                            <span style="width:8%"></span>
+                        </div>
+
+                        <div class="queue-item">
+                            <span>View Only</span>
+                            <strong>4%</strong>
+                        </div>
+
+                        <div class="progress">
+                            <span style="width:4%"></span>
+                        </div>
+
+                    </section>
+
+                    <!-- Recent Users -->
+
+                    <section class="dash-section">
+
+                        <div class="section-title">
+                            <h3>Recently Added</h3>
+                        </div>
+
+                        <div class="activity-list">
+
+                            <div class="activity-item">
+                                <div class="activity-avatar">A</div>
+                                <div>
+                                    <h4>Alex Johnson</h4>
+                                    <p>Support Agent • Added today</p>
+                                </div>
+                            </div>
+
+                            <div class="activity-item">
+                                <div class="activity-avatar">M</div>
+                                <div>
+                                    <h4>Maria Lopez</h4>
+                                    <p>Billing Team • Added today</p>
+                                </div>
+                            </div>
+
+                            <div class="activity-item">
+                                <div class="activity-avatar">J</div>
+                                <div>
+                                    <h4>James Walker</h4>
+                                    <p>Infrastructure • Yesterday</p>
+                                </div>
+                            </div>
+
+                            <div class="activity-item">
+                                <div class="activity-avatar">S</div>
+                                <div>
+                                    <h4>Sarah Green</h4>
+                                    <p>Viewer Account • Yesterday</p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </section>
+
+                    <!-- Permission Matrix -->
+
+                    <section class="dash-section span-2">
+
+                        <div class="section-title">
+                            <h3>Role Permissions</h3>
+                        </div>
+
+                        <table class="data-table">
+
+                            <thead>
+                                <tr>
+                                    <th>Role</th>
+                                    <th>Ticket Access</th>
+                                    <th>User Management</th>
+                                    <th>Reports</th>
+                                    <th>System Settings</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+
+                                <tr>
+                                    <td>Administrator</td>
+                                    <td>Full</td>
+                                    <td>Full</td>
+                                    <td>Full</td>
+                                    <td>Full</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Support Manager</td>
+                                    <td>Full</td>
+                                    <td>Limited</td>
+                                    <td>Full</td>
+                                    <td>Limited</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Support Agent</td>
+                                    <td>Assigned Only</td>
+                                    <td>None</td>
+                                    <td>Limited</td>
+                                    <td>None</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Viewer</td>
+                                    <td>Read Only</td>
+                                    <td>None</td>
+                                    <td>Read Only</td>
+                                    <td>None</td>
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </section>
+
+                </div>
+            </div>
+
+
+            <div id="view-audit" class="view-panel">
+                <div class="view-header">
+                    <h1>Security & Audit</h1>
+                </div>
+                <div class="stats-grid">
+
+                    <div class="stat-card">
+                        <span class="material-icons-outlined">shield</span>
+                        <h3>24</h3>
+                        <p>Failed Logins Today</p>
+                        <small>+5 from yesterday</small>
+                    </div>
+
+                    <div class="stat-card">
+                        <span class="material-icons-outlined">gpp_good</span>
+                        <h3>94%</h3>
+                        <p>2FA Enabled</p>
+                        <small>Across all users</small>
+                    </div>
+
+                    <div class="stat-card">
+                        <span class="material-icons-outlined">block</span>
+                        <h3>12</h3>
+                        <p>Blocked IP Addresses</p>
+                        <small>Automatically detected</small>
+                    </div>
+
+                    <div class="stat-card">
+                        <span class="material-icons-outlined">policy</span>
+                        <h3>3</h3>
+                        <p>Critical Security Events</p>
+                        <small>Needs review</small>
+                    </div>
+
+                </div>
+
+                <div class="dashboard-grid">
+
+                    <!-- Audit Logs -->
+
+                    <section class="dash-section span-2">
+
+                        <div class="section-title">
+                            <h3>Recent Audit Logs</h3>
+
+                            <button onclick="window.location.href='404page.html'" class="action-btn">
+                                Export Logs
+                            </button>
+                        </div>
+
+                        <div class="table-wrapper">
+
+                            <table class="data-table">
+
+                                <thead>
+                                    <tr>
+                                        <th>Time</th>
+                                        <th>User</th>
+                                        <th>Activity</th>
+                                        <th>IP Address</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+
+                                    <tr>
+                                        <td>10:48 AM</td>
+                                        <td>Olivia Carter</td>
+                                        <td>Updated user permissions</td>
+                                        <td>192.168.10.24</td>
+                                        <td><span class="badge success">Success</span></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>10:26 AM</td>
+                                        <td>Noah Wilson</td>
+                                        <td>Closed Ticket #ND-1047</td>
+                                        <td>192.168.10.44</td>
+                                        <td><span class="badge success">Success</span></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>09:51 AM</td>
+                                        <td>Unknown</td>
+                                        <td>Failed administrator login</td>
+                                        <td>203.117.12.81</td>
+                                        <td><span class="badge danger">Blocked</span></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>09:20 AM</td>
+                                        <td>Emma Brown</td>
+                                        <td>Exported monthly reports</td>
+                                        <td>192.168.10.62</td>
+                                        <td><span class="badge info">Logged</span></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>08:42 AM</td>
+                                        <td>Liam Davis</td>
+                                        <td>Updated ticket workflow</td>
+                                        <td>192.168.10.77</td>
+                                        <td><span class="badge success">Success</span></td>
+                                    </tr>
+
+                                </tbody>
+
+                            </table>
+
+                        </div>
+
+                    </section>
+
+                    <!-- Security Overview -->
+
+                    <section class="dash-section">
+
+                        <div class="section-title">
+                            <h3>Security Health</h3>
+                        </div>
+
+                        <div class="queue-item">
+                            <span>Account Protection</span>
+                            <strong>96%</strong>
+                        </div>
+
+                        <div class="progress">
+                            <span style="width:96%"></span>
+                        </div>
+
+                        <div class="queue-item">
+                            <span>Password Compliance</span>
+                            <strong>91%</strong>
+                        </div>
+
+                        <div class="progress">
+                            <span style="width:91%"></span>
+                        </div>
+
+                        <div class="queue-item">
+                            <span>2FA Adoption</span>
+                            <strong>94%</strong>
+                        </div>
+
+                        <div class="progress">
+                            <span style="width:94%"></span>
+                        </div>
+
+                        <div class="queue-item">
+                            <span>Device Trust</span>
+                            <strong>88%</strong>
+                        </div>
+
+                        <div class="progress">
+                            <span style="width:88%"></span>
+                        </div>
+
+                    </section>
+
+                    <!-- Security Events -->
+
+                    <section class="dash-section">
+
+                        <div class="section-title">
+                            <h3>Latest Security Events</h3>
+                        </div>
+
+                        <div class="activity-list">
+
+                            <div class="activity-item">
+                                <div class="activity-avatar">
+                                    <span class="material-icons-outlined">warning</span>
+                                </div>
+                                <div>
+                                    <h4>Multiple failed login attempts</h4>
+                                    <p>5 attempts blocked from a single IP.</p>
+                                </div>
+                            </div>
+
+                            <div class="activity-item">
+                                <div class="activity-avatar">
+                                    <span class="material-icons-outlined">verified_user</span>
+                                </div>
+                                <div>
+                                    <h4>2FA enabled</h4>
+                                    <p>Emma Brown enabled two-factor authentication.</p>
+                                </div>
+                            </div>
+
+                            <div class="activity-item">
+                                <div class="activity-avatar">
+                                    <span class="material-icons-outlined">security</span>
+                                </div>
+                                <div>
+                                    <h4>Firewall updated</h4>
+                                    <p>Security rules synchronized successfully.</p>
+                                </div>
+                            </div>
+
+                            <div class="activity-item">
+                                <div class="activity-avatar">
+                                    <span class="material-icons-outlined">backup</span>
+                                </div>
+                                <div>
+                                    <h4>Nightly backup completed</h4>
+                                    <p>Backup verified without any issues.</p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </section>
+
+                    <!-- Compliance -->
+
+                    <section class="dash-section span-2">
+
+                        <div class="section-title">
+                            <h3>Compliance Checklist</h3>
+                        </div>
+
+                        <table class="data-table">
+
+                            <thead>
+                                <tr>
+                                    <th>Policy</th>
+                                    <th>Status</th>
+                                    <th>Last Review</th>
+                                    <th>Owner</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+
+                                <tr>
+                                    <td>Password Policy</td>
+                                    <td><span class="badge success">Compliant</span></td>
+                                    <td>28 Jun 2026</td>
+                                    <td>Security Team</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Data Encryption</td>
+                                    <td><span class="badge success">Compliant</span></td>
+                                    <td>27 Jun 2026</td>
+                                    <td>Infrastructure</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Access Control</td>
+                                    <td><span class="badge warning">Review Required</span></td>
+                                    <td>25 Jun 2026</td>
+                                    <td>Operations</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Disaster Recovery</td>
+                                    <td><span class="badge info">Scheduled</span></td>
+                                    <td>22 Jun 2026</td>
+                                    <td>IT Services</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Backup Verification</td>
+                                    <td><span class="badge success">Passed</span></td>
+                                    <td>30 Jun 2026</td>
+                                    <td>Platform Team</td>
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </section>
+
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const email = localStorage.getItem("userEmail") || "admin@nexusdesk.com";
+            const displayName = localStorage.getItem("UserName") || "User";
+            const username = email.split("@")[0];
+            const initial = username.charAt(0).toUpperCase();
+
+            document.getElementById("adminName").textContent = username;
+            document.getElementById("adminEmail").textContent = email;
+
+            document.getElementById("dropdownAdminName").textContent = username;
+            document.getElementById("dropdownAdminEmail").textContent = email;
+
+            document.querySelector(".profile-avatar").textContent = initial;
+            document.querySelector(".dropdown-avatar").textContent = initial;
+
+            document.getElementById("Username").textContent = displayName;
+
+            const profileCard = document.getElementById("profileCard");
+            const profileDropdown = document.getElementById("profileDropdown");
+
+            profileCard.addEventListener("click", (e) => {
+
+                e.stopPropagation();
+
+                profileDropdown.classList.toggle("show");
+
+            });
+
+            document.addEventListener("click", () => {
+
+                profileDropdown.classList.remove("show");
+
+            });
+            const navItems = document.querySelectorAll('.sidebar-nav .nav-item');
+            const views = document.querySelectorAll('.view-panel');
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('sidebarOverlay');
+
+            // 1. Initial Dashboard Load Animation
+            gsap.from(".view-panel.active .dash-section", {
+                y: 20,
+                opacity: 0,
+                duration: 0.6,
+                stagger: 0.1,
+                ease: "power2.out"
+            });
+
+            // 2. View Switching Logic
+            navItems.forEach(item => {
+                item.addEventListener('click', (e) => {
+                    // Remove active from all nav items
+                    navItems.forEach(nav => nav.classList.remove('active'));
+                    // Add active to clicked nav item
+                    e.currentTarget.classList.add('active');
+
+                    const targetId = e.currentTarget.getAttribute('data-target');
+
+                    // Switch views
+                    views.forEach(view => {
+                        if (view.id === targetId) {
+                            view.classList.add('active');
+
+                            // Animate the 4 sections entering the new view
+                            gsap.fromTo(view.querySelectorAll('.dash-section'),
+                                { y: 20, opacity: 0 },
+                                { y: 0, opacity: 1, duration: 0.5, stagger: 0.1, ease: "power2.out" }
+                            );
+                        } else {
+                            view.classList.remove('active');
+                        }
+                    });
+
+                    // If on mobile, close the sidebar after clicking a link
+                    if (window.innerWidth <= 768) {
+                        closeSidebar();
+                    }
+                });
+            });
+
+            // 3. Mobile Sidebar Toggle Logic
+            const openSidebar = () => {
+                sidebar.classList.add('open');
+                overlay.classList.add('active');
+            };
+
+            const closeSidebar = () => {
+                sidebar.classList.remove('open');
+                overlay.classList.remove('active');
+            };
+
+            mobileMenuBtn.addEventListener('click', openSidebar);
+            overlay.addEventListener('click', closeSidebar);
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="Stackly Support Desk - A premium ticketing and issue tracking tool.">
+    <meta name="theme-color" content="#f5f5f7">
+
+    <title>Stackly | Support Desk</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+    <link rel="stylesheet" href="shared.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="./assets/Stackly-logo-Blue.webp" alt="Stackly Logo" loading="lazy">
+            </a>
+            <nav class="nav" id="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link active">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="services.html" class="nav-link">Services</a></li>
+                    <li><a href="blog.html" class="nav-link">Blog</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+                <div class="nav-buttons">
+                    <a href="signup.html" class="btn btn-primary">
+                        Signup
+                    </a>
+                </div>
+            </nav>
+            <button class="menu-btn" id="menuBtn" aria-label="Toggle Menu">
+                <span class="material-icons-outlined">menu</span>
+            </button>
+        </div>
+    </header>
+    <section class="hero-section" id="hero">
+        <div class="mouse-spotlight"></div>
+
+        <div class="hero-container">
+            <div class="hero-content">
+                <div data-aos="fade-down" data-aos-duration="1000">
+                    <span class="chip chip-outline hero-badge"
+                        style="color: #fff; border-color: rgba(255,255,255,0.2);">
+                        <span class="material-icons-outlined"
+                            style="font-size: 14px; margin-right: 4px;">auto_awesome</span>
+                        Introducing Smart Triage
+                    </span>
+                </div>
+
+                <h1 class="stagger-title">
+                    <span data-aos="fade-up" data-aos-delay="100">Resolve.</span>
+                    <span data-aos="fade-up" data-aos-delay="200">Refine.</span>
+                    <span class="highlight-gradient" data-aos="fade-up" data-aos-delay="300">Rejoice.</span>
+                </h1>
+
+                <p class="hero-desc" data-aos="fade-up" data-aos-delay="400">
+                    Stop managing tickets and start solving problems. Stackly brings intelligent automation and a
+                    distraction-free environment to your support workflow.
+                </p>
+
+                <div class="hero-actions" data-aos="fade-up" data-aos-delay="500">
+                    <a href="404page.html" class="btn btn-primary"
+                        style="padding: 1rem 2.5rem; font-size: 1.05rem;">Start Free
+                        Trial</a>
+                    <a href="404page.html" class="btn btn-ghost glass-btn"
+                        style="padding: 1rem 2.5rem; font-size: 1.05rem;">Explore Features</a>
+                </div>
+            </div>
+
+            <div class="bento-visual">
+                <div class="bento-card stat-card" data-aos="fade-right" data-aos-delay="600">
+                    <span class="material-icons-outlined stat-icon">timer</span>
+                    <div class="stat-info">
+                        <h4>2.4m</h4>
+                        <p>Avg Response Time</p>
+                    </div>
+                </div>
+                <div class="bento-card chart-card" data-aos="fade-left" data-aos-delay="800">
+                    <span class="material-icons-outlined stat-icon">trending_up</span>
+                    <div class="stat-info">
+                        <h4>98.9%</h4>
+                        <p>Resolution Rate</p>
+                    </div>
+                </div>
+
+                <div class="bento-card live-card" data-aos="zoom-in" data-aos-delay="700">
+                    <div class="pulse-indicator"></div>
+                    <div class="live-info">
+                        <p class="ticket-id">Ticket #8042</p>
+                        <h4>Payment Gateway Timeout</h4>
+                        <div style="margin-top: 1rem;">
+                            <span class="chip chip-warning">In Progress</span>
+                            <span class="chip chip-outline" style="color: #fff; border-color: #fff;">Assigned to
+                                Alex</span>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+    <section class="section-main" id="features">
+        <div class="section-heading heading-center" data-aos="fade-up">
+            <span class="heading-overline">Core Platform</span>
+            <h2>Everything you need to <span class="highlight-marker">resolve faster</span></h2>
+            <p class="heading-desc">
+                We stripped away the clutter. What's left is a lightning-fast, highly focused workspace designed
+                specifically for high-volume support teams.
+            </p>
+        </div>
+
+        <div class="features-grid">
+
+            <div class="card-interactive feature-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="feature-icon">
+                    <span class="material-icons-outlined">view_kanban</span>
+                </div>
+                <h3>Frictionless Kanban</h3>
+                <p>Drag, drop, and resolve. Our board renders at 60fps, meaning zero lag even when managing thousands of
+                    active tickets across multiple boards.</p>
+                <a href="404page.html" class="feature-link">Learn more <span
+                        class="material-icons-outlined">arrow_right_alt</span></a>
+            </div>
+
+
+            <div class="card-interactive feature-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="feature-icon">
+                    <span class="material-icons-outlined">route</span>
+                </div>
+                <h3>Smart Routing</h3>
+                <p>Automatically assign tickets based on priority, agent workload, or specific technical expertise using
+                    our <span class="text-accent">custom rules engine</span>.</p>
+                <a href="404page.html" class="feature-link">View automation <span
+                        class="material-icons-outlined">arrow_right_alt</span></a>
+            </div>
+
+
+            <div class="card-interactive feature-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="feature-icon">
+                    <span class="material-icons-outlined">insights</span>
+                </div>
+                <h3>Real-time Analytics</h3>
+                <p>Monitor resolution rates, agent performance, and customer satisfaction scores live. No more waiting
+                    for end-of-week reporting exports.</p>
+                <a href="404page.html" class="feature-link">Explore dashboards <span
+                        class="material-icons-outlined">arrow_right_alt</span></a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-alt" id="about">
+        <div class="about-container">
+            <div class="about-grid">
+
+
+                <div class="about-content" data-aos="fade-right" data-aos-duration="800">
+                    <span class="heading-overline">Why Stackly?</span>
+                    <h2>Built for speed, <br>designed for <span class="text-accent">clarity.</span></h2>
+                    <p class="about-desc">
+                        Most ticketing tools are bloated with legacy features you never use. We rebuilt the support
+                        experience from the ground up to focus entirely on what matters: resolving customer issues as
+                        quickly as possible without agent burnout.
+                    </p>
+
+                    <ul class="benefit-list">
+                        <li>
+                            <span class="material-icons-outlined benefit-icon">check_circle</span>
+                            <strong>Zero-clutter interface:</strong> See only what you need to solve the current ticket.
+                        </li>
+                        <li>
+                            <span class="material-icons-outlined benefit-icon">check_circle</span>
+                            <strong>Keyboard-first design:</strong> Navigate, assign, and resolve without touching your
+                            mouse.
+                        </li>
+                        <li>
+                            <span class="material-icons-outlined benefit-icon">check_circle</span>
+                            <strong>Enterprise-grade security:</strong> End-to-end encryption for all customer data.
+                        </li>
+                    </ul>
+
+                    <a href="404page.html" class="btn btn-primary" style="margin-top: 1rem;">Read our story</a>
+                </div>
+
+
+                <div class="about-visual" data-aos="fade-left" data-aos-duration="800" data-aos-delay="200">
+
+                    <div class="image-wrapper">
+                        <img src="./assets/Home1.webp" alt="Team collaborating on support tickets"
+                            class="img-cover shadow-premium">
+                        <div class="floating-stat-card card-base" data-aos="zoom-in" data-aos-delay="600">
+                            <div class="stat-header">
+                                <span class="material-icons-outlined" style="color: #34d399;">arrow_upward</span>
+                                <span style="font-weight: 600; color: #107b3b;">+42%</span>
+                            </div>
+                            <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 0.25rem;">Team
+                                Productivity</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="hover-reveal-section section-dark">
+
+        <div class="hover-image-cursor" id="hoverCursor">
+            <img src="" alt="Preview" id="hoverCursorImg">
+        </div>
+
+        <div class="hover-list">
+
+            <div class="hover-item" data-img="./assets/home2.webp">
+                <h2>Analytics</h2>
+            </div>
+            <div class="hover-item" data-img="./assets/home3.webp">
+                <h2>Automation</h2>
+            </div>
+            <div class="hover-item" data-img="./assets/home4.webp">
+                <h2>Security</h2>
+            </div>
+            <div class="hover-item" data-img="./assets/home1.webp">
+                <h2>Collaboration</h2>
+            </div>
+        </div>
+    </section>
+    <section class="section-main" id="blog">
+        <div class="section-heading heading-center" data-aos="fade-up">
+            <span class="heading-overline">Resources & Updates</span>
+            <h2>The latest from <span class="text-accent">Stackly</span></h2>
+            <p class="heading-desc">
+                Product updates, support team best practices, and industry insights to help you deliver exceptional
+                customer experiences.
+            </p>
+        </div>
+
+        <div class="blog-grid">
+            <article class="blog-card card-interactive" data-aos="fade-up" data-aos-delay="100">
+                <div class="blog-image-wrapper">
+                    <img src="./assets/blog2.webp" alt="Data dashboard" class="blog-image">
+                </div>
+                <div class="blog-content">
+                    <div class="blog-meta">
+                        <span class="chip chip-primary">Product Update</span>
+                        <span class="blog-date">Oct 12, 2026</span>
+                    </div>
+                    <h3>Introducing AI-Powered Triage</h3>
+                    <p>Learn how our new machine learning model automatically tags, prioritizes, and routes incoming
+                        tickets with 98% accuracy.</p>
+                    <a href="404page.html" class="feature-link">Read Article <span
+                            class="material-icons-outlined">arrow_right_alt</span></a>
+                </div>
+            </article>
+
+            <article class="blog-card card-interactive" data-aos="fade-up" data-aos-delay="200">
+                <div class="blog-image-wrapper">
+                    <img src="./assets/blog1.webp" alt="Team meeting" class="blog-image">
+                </div>
+                <div class="blog-content">
+                    <div class="blog-meta">
+                        <span class="chip chip-default">Best Practices</span>
+                        <span class="blog-date">Sep 28, 2026</span>
+                    </div>
+                    <h3>How to reduce First Response Time</h3>
+                    <p>A deep dive into the workflows and automation rules top-performing teams use to cut their
+                        response times in half.</p>
+                    <a href="404page.html" class="feature-link">Read Article <span
+                            class="material-icons-outlined">arrow_right_alt</span></a>
+                </div>
+            </article>
+
+            <article class="blog-card card-interactive" data-aos="fade-up" data-aos-delay="300">
+                <div class="blog-image-wrapper">
+                    <img src="./assets/blog3.webp" alt="Office space" class="blog-image">
+                </div>
+                <div class="blog-content">
+                    <div class="blog-meta">
+                        <span class="chip chip-outline">Company News</span>
+                        <span class="blog-date">Sep 15, 2026</span>
+                    </div>
+                    <h3>Stackly secures Series A Funding</h3>
+                    <p>We are thrilled to announce our $12M Series A round, allowing us to accelerate platform
+                        development and expand our global team.</p>
+                    <a href="404page.html" class="feature-link">Read Article <span
+                            class="material-icons-outlined">arrow_right_alt</span></a>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <section class="modern-sticky-section" id="sticky-features">
+        <div class="sticky-container">
+
+
+            <div class="sticky-left">
+                <div class="sticky-content">
+                    <span class="heading-overline">Workflow Automation</span>
+                    <h2 class="massive-text">Work <br> <span class="text-accent">Smarter.</span></h2>
+                    <div class="sticky-visual">
+                        <img src="./assets/home2.webp" alt="Dashboard" class="img-cover">
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="scrolling-right">
+                <div class="scroll-card card-interactive">
+                    <h3>01. Intelligent Routing</h3>
+                    <p>Tickets are instantly analyzed and assigned to the right agent based on sentiment and expertise.
+                        Zero manual triage required.</p>
+                </div>
+
+                <div class="scroll-card card-interactive">
+                    <h3>02. Collision Detection</h3>
+                    <p>See who is viewing or replying to a ticket in real-time. Never send duplicate responses to a
+                        customer again.</p>
+                </div>
+
+                <div class="scroll-card card-interactive">
+                    <h3>03. One-Click Macros</h3>
+                    <p>Deploy complex, multi-step actions with a single keyboard shortcut. Resolve common issues in
+                        milliseconds.</p>
+                </div>
+
+                <div class="scroll-card card-interactive">
+                    <h3>04. Custom API Webhooks</h3>
+                    <p>Connect your internal tools directly to the board. Trigger external deployments the moment a
+                        ticket hits 'Resolved'.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="section-dark" id="testimonials"
+        style="min-height: 80vh; display: flex; flex-direction: column; justify-content: center;">
+
+        <div class="hero-glow" style="top: 10%; opacity: 0.4;"></div>
+
+        <div class="section-heading heading-center" data-aos="fade-up">
+            <span class="heading-overline" style="color: #66b2ff;">Social Proof</span>
+            <h2>Loved by <span class="highlight-gradient">Support Teams</span></h2>
+        </div>
+
+        <div class="testimonial-spotlight-container" data-aos="zoom-in-up" data-aos-delay="200">
+
+
+            <div class="spotlight-glass-panel">
+                <span class="material-icons-outlined quote-icon-large">format_quote</span>
+
+                <div class="active-quote-wrapper" id="quoteWrapper">
+                    <div class="stars" id="activeStars">
+
+                    </div>
+                    <p class="active-review-text" id="activeQuoteText"></p>
+
+                    <div class="active-reviewer-info">
+                        <h4 id="activeName"></h4>
+                        <p id="activeRole"></p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="avatar-navigation" id="avatarNav">
+
+            </div>
+
+
+            <div class="autoplay-progress">
+                <div class="progress-bar" id="progressBar"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-main" id="pricing">
+        <div class="section-heading heading-center" data-aos="fade-up">
+            <span class="heading-overline">Simple Pricing</span>
+            <h2>Transparent plans for <span class="text-accent">any team size</span></h2>
+            <p class="heading-desc">
+                Start for free, then upgrade as your support volume grows. No hidden fees or surprise overages.
+            </p>
+        </div>
+
+
+        <div class="billing-toggle-container" data-aos="fade-up" data-aos-delay="100">
+            <span class="toggle-label" id="label-monthly">Monthly</span>
+            <label class="toggle-switch">
+                <input type="checkbox" id="billingToggle">
+                <span class="toggle-slider"></span>
+            </label>
+            <span class="toggle-label" id="label-yearly">Annually <span class="save-badge">Save 20%</span></span>
+        </div>
+
+        <div class="pricing-grid">
+
+            <div class="pricing-card card-base" data-aos="fade-up" data-aos-delay="150">
+                <div class="pricing-header">
+                    <h3>Starter</h3>
+                    <p>For small teams getting started.</p>
+                    <div class="price">
+                        <span class="currency">$</span>
+                        <span class="amount" data-monthly="19" data-yearly="15">19</span>
+                        <span class="period">/mo per user</span>
+                    </div>
+                    <a href="404page.html" class="btn btn-ghost full-width">Start Free Trial</a>
+                </div>
+                <div class="pricing-features">
+                    <ul>
+                        <li><span class="material-icons-outlined">check</span> Up to 3 Users</li>
+                        <li><span class="material-icons-outlined">check</span> Unified Email Inbox</li>
+                        <li><span class="material-icons-outlined">check</span> Basic Kanban Board</li>
+                        <li><span class="material-icons-outlined">check</span> 7-Day Ticket History</li>
+                        <li class="disabled"><span class="material-icons-outlined">close</span> AI Auto-Triage</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <div class="pricing-card card-base popular-tier" data-aos="fade-up" data-aos-delay="250">
+                <div class="popular-badge">Most Popular</div>
+                <div class="pricing-header">
+                    <h3>Professional</h3>
+                    <p>For scaling support operations.</p>
+                    <div class="price">
+                        <span class="currency">$</span>
+                        <span class="amount" data-monthly="49" data-yearly="39">49</span>
+                        <span class="period">/mo per user</span>
+                    </div>
+                    <a href="404page.html" class="btn btn-primary full-width">Start Free Trial</a>
+                </div>
+                <div class="pricing-features">
+                    <ul>
+                        <li><span class="material-icons-outlined">check</span> Unlimited Users</li>
+                        <li><span class="material-icons-outlined">check</span> Omnichannel Support</li>
+                        <li><span class="material-icons-outlined">check</span> Advanced Workflows</li>
+                        <li><span class="material-icons-outlined">check</span> Unlimited History</li>
+                        <li><span class="material-icons-outlined">check</span> AI Auto-Triage</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <div class="pricing-card card-base" data-aos="fade-up" data-aos-delay="350">
+                <div class="pricing-header">
+                    <h3>Enterprise</h3>
+                    <p>For custom security and compliance.</p>
+                    <div class="price">
+                        <span class="currency">$</span>
+                        <span class="amount" data-monthly="99" data-yearly="79">99</span>
+                        <span class="period">/mo per user</span>
+                    </div>
+                    <a href="404page.html" class="btn btn-ghost full-width">Contact Sales</a>
+                </div>
+                <div class="pricing-features">
+                    <ul>
+                        <li><span class="material-icons-outlined">check</span> Everything in Pro</li>
+                        <li><span class="material-icons-outlined">check</span> Dedicated Success Manager</li>
+                        <li><span class="material-icons-outlined">check</span> Custom Data Retention</li>
+                        <li><span class="material-icons-outlined">check</span> Single Sign-On (SSO)</li>
+                        <li><span class="material-icons-outlined">check</span> 24/7 Phone Support</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-alt" id="faq">
+        <div class="section-heading heading-center" data-aos="fade-up">
+            <span class="heading-overline">Questions?</span>
+            <h2>Frequently Asked <span class="text-accent">Questions</span></h2>
+            <p class="heading-desc">
+                Everything you need to know about the product and billing.
+            </p>
+        </div>
+
+        <div class="faq-container">
+
+            <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
+                <button class="faq-question">
+                    Can I integrate my existing email support address?
+                    <span class="material-icons-outlined faq-icon">add</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner">
+                        <p>Yes, absolutely. You can forward emails from Gmail, Outlook, or any standard IMAP provider
+                            directly into Stackly. Setting it up takes less than two minutes from your dashboard.</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
+                <button class="faq-question">
+                    How does the AI Auto-Triage work?
+                    <span class="material-icons-outlined faq-icon">add</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner">
+                        <p>Our machine learning model analyzes the text of incoming tickets. It automatically assigns a
+                            priority level, adds relevant tags, and routes the ticket to the agent with the right
+                            expertise, bypassing the need for manual sorting.</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
+                <button class="faq-question">
+                    Is there a limit to how many historical tickets I can store?
+                    <span class="material-icons-outlined faq-icon">add</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner">
+                        <p>On the Starter plan, we keep 7 days of ticket history searchable. On the Professional and
+                            Enterprise plans, your ticket history is unlimited and stored securely forever.</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="faq-item" data-aos="fade-up" data-aos-delay="400">
+                <button class="faq-question">
+                    Can I switch between monthly and annual billing later?
+                    <span class="material-icons-outlined faq-icon">add</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner">
+                        <p>Yes. You can upgrade, downgrade, or switch your billing cycle at any time from your account
+                            settings. Any prorated balance will be automatically applied to your next invoice.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section-main" id="contact" style="padding-bottom: 0;">
+        <div class="cta-wrapper" data-aos="zoom-in" data-aos-duration="800">
+            <div class="cta-content">
+                <h2>Ready to transform your <br>support workflow?</h2>
+                <p>Join thousands of high-performance teams already using Stackly to resolve tickets faster and keep
+                    customers happier.</p>
+
+                <div class="cta-actions">
+                    <a href="404page.html" class="btn btn-secondary"
+                        style="background-color: var(--color-surface); color: var(--color-brand); font-size: 1.1rem; padding: 1rem 2.5rem;">Start
+                        your free trial</a>
+                    <a href="404page.html" class="btn btn-ghost"
+                        style="color: var(--color-surface); border-color: rgba(255,255,255,0.3); font-size: 1.1rem; padding: 1rem 2.5rem;">Contact
+                        Sales</a>
+                </div>
+                <p class="cta-subtext">14-day free trial. No credit card required.</p>
+            </div>
+
+            <div class="cta-shape shape-1"></div>
+            <div class="cta-shape shape-2"></div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo"> <img src="./assets/Stackly-logo-Blue.webp" alt="Logo"
+                            loading="lazy">
+                        </span></a>
+                    <p>The premium ticketing tool designed for modern, high-volume support teams.</p>
+                    <div class="social-links">
+                        <a href="404page.html"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="404page.html"><i class="fa-brands fa-github"></i></a>
+                        <a href="404page.html"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#blog">Blog</a></li>
+                        <li><a href="404page.html">Help Center</a></li>
+                        <li><a href="404page.html">API Documentation</a></li>
+                        <li><a href="404page.html">Community</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="404page.html">Privacy Policy</a></li>
+                        <li><a href="404page.html">Terms of Service</a></li>
+                        <li><a href="404page.html">Security</a></li>
+                        <li><a href="404page.html">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Stackly Inc. All rights reserved.</p>
+                <div class="status-indicator">
+                    <span class="status-dot"></span> All systems operational
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.34/dist/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+    <script>
+
+
+
+        const heroSection = document.getElementById('hero');
+
+        if (heroSection) {
+            heroSection.addEventListener('mousemove', (e) => {
+
+                const rect = heroSection.getBoundingClientRect();
+
+
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+
+
+                heroSection.style.setProperty('--mouse-x', `${x}px`);
+                heroSection.style.setProperty('--mouse-y', `${y}px`);
+            });
+        }
+
+
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const testimonials = [
+                {
+                    id: 0,
+                    name: "Shreya",
+                    role: "Head of Support.",
+                    image: "./assets/review1.webp",
+                    quote: "Switching to Stackly was the best decision for our team. The AI auto-triage alone saves our managers 15 hours a week in manual ticket routing. It's incredibly fast.",
+                    stars: 5
+                },
+                {
+                    id: 1,
+                    name: "David",
+                    role: "VP of Customer Success, SaaS Inc.",
+                    image: "./assets/review3.webp",
+                    quote: "We tried everything—Zendesk, Intercom, Freshdesk. Stackly is the only platform that feels like it was built for the 21st century. The keyboard shortcuts are a game changer.",
+                    stars: 5
+                },
+                {
+                    id: 2,
+                    name: "Ishwarya",
+                    role: "Director of IT, Global Retail",
+                    image: "./assets/review2.webp",
+                    quote: "The real-time Kanban board is flawless. We manage over 2,000 active tickets across 4 regions, and the UI never drops a single frame. Absolutely premium experience.",
+                    stars: 5
+                }
+            ];
+
+            const quoteWrapper = document.getElementById('quoteWrapper');
+            const quoteText = document.getElementById('activeQuoteText');
+            const authorName = document.getElementById('activeName');
+            const authorRole = document.getElementById('activeRole');
+            const starsContainer = document.getElementById('activeStars');
+            const avatarNav = document.getElementById('avatarNav');
+            const progressBar = document.getElementById('progressBar');
+
+            let currentIndex = 0;
+            let autoplayInterval;
+            const AUTOPLAY_DURATION = 6000; // 6 seconds per slide
+
+
+            testimonials.forEach((test, index) => {
+                const btn = document.createElement('button');
+                btn.className = `avatar-btn ${index === 0 ? 'is-active' : ''}`;
+                btn.setAttribute('data-index', index);
+                btn.innerHTML = `<img src="${test.image}" alt="${test.name}">`;
+
+                btn.addEventListener('click', () => {
+                    if (currentIndex === index) return;
+                    resetAutoplay();
+                    updateSpotlight(index);
+                });
+
+                avatarNav.appendChild(btn);
+            });
+
+
+            const updateSpotlight = (index) => {
+
+                quoteWrapper.classList.add('fade-out');
+
+
+                document.querySelectorAll('.avatar-btn').forEach(btn => btn.classList.remove('is-active'));
+                avatarNav.children[index].classList.add('is-active');
+
+
+                setTimeout(() => {
+                    const data = testimonials[index];
+                    quoteText.textContent = `"${data.quote}"`;
+                    authorName.textContent = data.name;
+                    authorRole.textContent = data.role;
+
+
+                    starsContainer.innerHTML = '';
+                    for (let i = 0; i < data.stars; i++) {
+                        starsContainer.innerHTML += '<i class="fa-solid fa-star"></i>';
+                    }
+
+                    currentIndex = index;
+                    quoteWrapper.classList.remove('fade-out');
+                }, 400); // Matches the 0.4s CSS transition
+            };
+
+
+            const startAutoplay = () => {
+
+                progressBar.style.transition = 'none';
+                progressBar.style.width = '0%';
+
+
+                setTimeout(() => {
+                    progressBar.style.transition = `width ${AUTOPLAY_DURATION}ms linear`;
+                    progressBar.style.width = '100%';
+                }, 50);
+
+                autoplayInterval = setInterval(() => {
+                    let nextIndex = (currentIndex + 1) % testimonials.length;
+                    updateSpotlight(nextIndex);
+
+
+                    progressBar.style.transition = 'none';
+                    progressBar.style.width = '0%';
+                    setTimeout(() => {
+                        progressBar.style.transition = `width ${AUTOPLAY_DURATION}ms linear`;
+                        progressBar.style.width = '100%';
+                    }, 50);
+
+                }, AUTOPLAY_DURATION);
+            };
+
+            const resetAutoplay = () => {
+                clearInterval(autoplayInterval);
+                startAutoplay();
+            };
+
+
+            updateSpotlight(0);
+            startAutoplay();
+        });
+
+
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const billingToggle = document.getElementById('billingToggle');
+            const labelMonthly = document.getElementById('label-monthly');
+            const labelYearly = document.getElementById('label-yearly');
+            const priceAmounts = document.querySelectorAll('.price .amount');
+
+            if (billingToggle) {
+
+                labelMonthly.classList.add('active');
+
+                billingToggle.addEventListener('change', (e) => {
+                    const isYearly = e.target.checked;
+
+
+                    if (isYearly) {
+                        labelYearly.classList.add('active');
+                        labelMonthly.classList.remove('active');
+                    } else {
+                        labelMonthly.classList.add('active');
+                        labelYearly.classList.remove('active');
+                    }
+
+
+                    priceAmounts.forEach(amountEl => {
+                        amountEl.style.opacity = '0'; // Fade out
+
+                        setTimeout(() => {
+                            const newPrice = isYearly
+                                ? amountEl.getAttribute('data-yearly')
+                                : amountEl.getAttribute('data-monthly');
+
+                            amountEl.textContent = newPrice;
+                            amountEl.style.opacity = '1'; // Fade back in
+                        }, 150); // Wait half of the CSS transition time
+                    });
+                });
+            }
+        });
+
+
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const faqItems = document.querySelectorAll('.faq-item');
+
+            faqItems.forEach(item => {
+                const questionBtn = item.querySelector('.faq-question');
+
+                questionBtn.addEventListener('click', () => {
+                    const isOpen = item.classList.contains('is-open');
+
+
+                    faqItems.forEach(otherItem => {
+                        otherItem.classList.remove('is-open');
+                    });
+
+
+                    if (!isOpen) {
+                        item.classList.add('is-open');
+                    }
+                });
+            });
+        });
+
+
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const hoverItems = document.querySelectorAll('.hover-item');
+            const cursor = document.getElementById('hoverCursor');
+            const cursorImg = document.getElementById('hoverCursorImg');
+
+            let mouseX = 0;
+            let mouseY = 0;
+            let cursorX = 0;
+            let cursorY = 0;
+
+
+            const renderCursor = () => {
+
+                cursorX += (mouseX - cursorX) * 0.15;
+                cursorY += (mouseY - cursorY) * 0.15;
+
+                cursor.style.left = `${cursorX}px`;
+                cursor.style.top = `${cursorY}px`;
+
+                requestAnimationFrame(renderCursor);
+            };
+            requestAnimationFrame(renderCursor);
+
+
+            window.addEventListener('mousemove', (e) => {
+                mouseX = e.clientX;
+                mouseY = e.clientY;
+            });
+
+            hoverItems.forEach(item => {
+                item.addEventListener('mouseenter', () => {
+                    const imgSrc = item.getAttribute('data-img');
+                    cursorImg.src = imgSrc;
+                    cursor.classList.add('is-visible');
+                });
+
+                item.addEventListener('mouseleave', () => {
+                    cursor.classList.remove('is-visible');
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

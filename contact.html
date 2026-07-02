@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="Stackly Support Desk - A premium ticketing and issue tracking tool.">
+    <meta name="theme-color" content="#f5f5f7">
+
+    <title>Stackly | Support Desk</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+    <link rel="stylesheet" href="shared.css">
+    <link rel="stylesheet" href="contact.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="./assets/Stackly-logo-Blue.webp" alt="Stackly Logo" loading="lazy">
+            </a>
+            <nav class="nav" id="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="services.html" class="nav-link">Services</a></li>
+                    <li><a href="blog.html" class="nav-link">Blog</a></li>
+                    <li><a href="contact.html" class="nav-link active">Contact</a></li>
+                </ul>
+                <div class="nav-buttons">
+                    <a href="signup.html" class="btn btn-primary">
+                        Signup
+                    </a>
+                </div>
+            </nav>
+            <button class="menu-btn" id="menuBtn" aria-label="Toggle Menu">
+                <span class="material-icons-outlined">menu</span>
+            </button>
+        </div>
+    </header>
+    <section class="contact-hero">
+        <div class="hero-container">
+
+            <div class="hero-text-block">
+                <span class="heading-overline">Talk to Engineering</span>
+                <h1 class="hero-title">
+                    Got a complex <br>
+                    <span>stack to solve?</span>
+                </h1>
+                <p class="hero-desc">
+                    From migration blueprints to custom integrations, our engineering team is ready to audit your
+                    requirements.
+                </p>
+            </div>
+
+            <div class="hero-visual-block">
+                <div class="stat-card">
+                    <span class="stat-number">24/7</span>
+                    <p>Engineering Support</p>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">15m</span>
+                    <p>Avg. Response Time</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <section class="trust-section">
+        <div class="trust-container">
+            <p class="trust-label">Trusted by high-scale support teams & engineering hubs</p>
+            <div class="trust-grid">
+                <div class="trust-item">ISO 27001</div>
+                <div class="trust-item">GDPR Compliant</div>
+                <div class="trust-item">SSO Enabled</div>
+                <div class="trust-item">99.99% Uptime</div>
+                <div class="trust-item">SOC2 Type II</div>
+            </div>
+        </div>
+    </section>
+    <section class="contact-section" id="contact">
+        <div class="contact-grid-layout">
+
+            <div class="contact-meta">
+                <h2>Let’s talk.</h2>
+                <div class="meta-block">
+                    <span>Location</span>
+                    <p>Salem, Tamil Nadu<br>India</p>
+                </div>
+                <div class="meta-block">
+                    <span>Direct Mail</span>
+                    <a href="mailto:hello@Stackly.io">info@thestackly.com</a>
+                </div>
+                <div class="meta-socials">
+                    <a href="404page.html">Twitter</a>
+                    <a href="404page.html">LinkedIn</a>
+                    <a href="404page.html">GitHub</a>
+                </div>
+            </div>
+
+            <div class="contact-form-surface">
+                <form id="contactForm" class="form-surface">
+                    <div class="field-row">
+                        <div class="form-group floating">
+                            <input type="text" id="name" placeholder=" " required>
+                            <label>Full Name</label>
+                        </div>
+                        <div class="form-group floating">
+                            <input type="email" id="email" placeholder=" " required>
+                            <label>Business Email</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group floating">
+                        <textarea id="message" placeholder=" " rows="3"></textarea>
+                        <label>How can we help?</label>
+                    </div>
+
+                    <button type="submit" class="submit-btn-premium">
+                        Send Message
+                    </button>
+                </form>
+                <div id="formFeedback" class="form-feedback"></div>
+            </div>
+        </div>
+    </section>
+    <section class="map-section">
+        <div class="map-container">
+            <div class="map-header">
+                <span class="heading-overline">Presence</span>
+                <h2>Engineering Hub</h2>
+                <p>HQ: Coimbatore, India. Supporting support teams worldwide.</p>
+            </div>
+
+            <div class="map-wrapper">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62665.41927361811!2d76.9114228965612!3d11.004558661604085!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba859af2f9710dd%3A0xaff4907923485e8d!2sCoimbatore%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1719732400000!5m2!1sen!2sin"
+                    width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </section>
+    <section class="section-main" id="contact" style="padding-bottom: 0;">
+        <div class="cta-wrapper" data-aos="zoom-in" data-aos-duration="800">
+            <div class="cta-content">
+                <h2>Ready to transform your <br>support workflow?</h2>
+                <p>Join thousands of high-performance teams already using Stackly to resolve tickets faster and keep
+                    customers happier.</p>
+
+                <div class="cta-actions">
+                    <a href="404page.html" class="btn btn-secondary"
+                        style="background-color: var(--color-surface); color: var(--color-brand); font-size: 1.1rem; padding: 1rem 2.5rem;">Start
+                        your free trial</a>
+                    <a href="404page.html" class="btn btn-ghost"
+                        style="color: var(--color-surface); border-color: rgba(255,255,255,0.3); font-size: 1.1rem; padding: 1rem 2.5rem;">Contact
+                        Sales</a>
+                </div>
+                <p class="cta-subtext">14-day free trial. No credit card required.</p>
+            </div>
+
+            <div class="cta-shape shape-1"></div>
+            <div class="cta-shape shape-2"></div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo"> <img src="./assets/Stackly-logo-Blue.webp" alt="Logo"
+                            loading="lazy">
+                        </span></a>
+                    <p>The premium ticketing tool designed for modern, high-volume support teams.</p>
+                    <div class="social-links">
+                        <a href="404page.html"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="404page.html"><i class="fa-brands fa-github"></i></a>
+                        <a href="404page.html"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="404page.html">Blog</a></li>
+                        <li><a href="404page.html">Help Center</a></li>
+                        <li><a href="404page.html">API Documentation</a></li>
+                        <li><a href="404page.html">Community</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="404page.html">Privacy Policy</a></li>
+                        <li><a href="404page.html">Terms of Service</a></li>
+                        <li><a href="404page.html">Security</a></li>
+                        <li><a href="404page.html">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Stackly Inc. All rights reserved.</p>
+                <div class="status-indicator">
+                    <span class="status-dot"></span> All systems operational
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.34/dist/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const tl = gsap.timeline();
+
+            tl.from([".heading-overline", ".hero-title", ".hero-desc"], {
+                y: 60,
+                opacity: 0,
+                duration: 1,
+                stagger: 0.15,
+                ease: "power4.out"
+            })
+                .from(".stat-card", {
+                    scale: 0.9,
+                    opacity: 0,
+                    duration: 0.8,
+                    stagger: 0.2,
+                    ease: "back.out(1.4)"
+                }, "-=0.6");
+            gsap.from(".trust-item", {
+                opacity: 0,
+                y: 20,
+                stagger: 0.1,
+                duration: 0.6,
+                scrollTrigger: {
+                    trigger: ".trust-section",
+                    start: "top 90%"
+                }
+            });
+
+            document.getElementById('contactForm').addEventListener('submit', function (e) {
+                e.preventDefault();
+
+                const name = document.getElementById('name').value.trim();
+                const email = document.getElementById('email').value.trim();
+                const message = document.getElementById('message').value.trim();
+                const feedback = document.getElementById('formFeedback');
+                const formSurface = document.querySelector('.contact-form-surface');
+
+
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+
+                if (!name || !message || !emailRegex.test(email)) {
+
+                    feedback.textContent = "Please check your inputs and try again.";
+                    feedback.className = "form-feedback error";
+
+
+                    gsap.to(formSurface, { x: -10, duration: 0.1, repeat: 5, yoyo: true });
+                    gsap.to(feedback, { opacity: 1, duration: 0.3 });
+                } else {
+                    feedback.textContent = "Message received";
+                    feedback.className = "form-feedback success";
+                    window.location.href = '404page.html'
+                    gsap.to(this, {
+                        opacity: 0, duration: 0.5, onComplete: () => {
+                            this.style.display = 'none';
+                        }
+                    });
+                    gsap.to(feedback, { opacity: 1, duration: 0.5, y: -20 });
+                }
+            });
+
+
+            gsap.from(".map-wrapper", {
+                scale: 0,
+                transformOrigin: "center",
+                delay: 1.5,
+                duration: 0.8,
+                ease: "back.out(2)"
+            });
+        }); 
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,505 @@
+.services-hero-glitch {
+    padding: 6rem 5% 8rem;
+    background: #050505;
+    color: #fff;
+    text-align: center;
+}
+
+.hero-body-content {
+    max-width: 700px;
+    margin: 3rem auto 0;
+}
+
+.hero-subtext {
+    font-size: 1.2rem;
+    color: #888;
+    line-height: 1.6;
+    margin-bottom: 4rem;
+}
+
+.glitch-title{
+    color: var(--text-inverse);
+}
+
+
+.hero-metrics {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    border-top: 1px solid #222;
+    padding-top: 3rem;
+}
+
+.metric .val {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+.metric .label {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: #555;
+}
+
+.services-process {
+    padding: 10rem 5%;
+    background: #f9f9f9;
+}
+
+.pipeline {
+    position: relative;
+    max-width: 800px;
+    margin: 5rem auto;
+}
+
+.pipeline-line {
+    position: absolute;
+    left: 20px;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background: #e5e5e5;
+}
+
+.step {
+    display: flex;
+    gap: 3rem;
+    margin-bottom: 6rem;
+    position: relative;
+}
+
+.step-dot {
+    width: 40px;
+    height: 40px;
+    background: #fff;
+    border: 2px solid var(--color-brand);
+    border-radius: 50%;
+    flex-shrink: 0;
+    z-index: 2;
+}
+
+.step-number {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: var(--color-brand);
+}
+
+.step-content h3 {
+    font-size: 1.8rem;
+    margin: 0.5rem 0;
+}
+
+/* =========================================
+   SERVICES: EXPANDING ACCORDION
+   ========================================= */
+.services-accordion-section {
+    padding: 8rem 5%;
+    background-color: #050505;
+    color: #fff;
+    overflow: hidden;
+}
+
+.accordion-container {
+    display: flex;
+    width: 100%;
+    max-width: 1400px;
+    height: 60vh;
+    
+    min-height: 500px;
+    margin: 4rem auto 0;
+    gap: 1rem;
+}
+
+
+.acc-panel {
+    position: relative;
+    flex: 1;
+    
+    border-radius: var(--radius-lg);
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    cursor: pointer;
+    transition: flex 0.7s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.acc-panel.active {
+    flex: 5;
+    
+}
+
+
+.acc-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.3) 100%);
+    opacity: 0.7;
+    transition: opacity 0.5s ease;
+}
+
+.acc-panel.active .acc-overlay {
+    opacity: 0.9;
+}
+
+
+.acc-content {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: flex-end;
+    padding: 2rem;
+}
+
+
+.acc-vertical-title {
+    position: absolute;
+    bottom: 6rem;
+    left: 50%;
+    transform: translateX(-50%) rotate(-90deg);
+    transform-origin: bottom center;
+    white-space: nowrap;
+    opacity: 1;
+    transition: opacity 0.4s ease;
+
+    text-align: start;
+}
+
+.acc-vertical-title h3 {
+    font-size: 1.2rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(246, 246, 246, 0.6);
+}
+
+
+.acc-panel.active .acc-vertical-title {
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+.acc-details {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+    max-width: 500px;
+}
+
+.acc-details h3 {
+    font-size: 2.5rem;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+    color: var(--text-inverse);
+}
+
+.acc-details p {
+    color: #a1a1a6;
+    line-height: 1.6;
+    font-size: 1.1rem;
+}
+
+
+.acc-panel.active .acc-details {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.3s;
+    
+}
+
+
+@media (max-width: 992px) {
+    .accordion-container {
+        flex-direction: column;
+        height: 900px;
+    }
+
+    .acc-vertical-title {
+        transform: translateX(-50%) rotate(0deg);
+        
+        left: 2rem;
+        transform: none;
+    }
+}
+
+/* =========================================
+   SERVICES: CASE STUDY (STICKY SPLIT)
+   ========================================= */
+.case-study-section {
+    padding: 10rem 5%;
+    background-color: #ffffff;
+    color: #1a1a1a;
+    position: relative;
+}
+
+.case-study-header {
+    text-align: center;
+    margin-bottom: 6rem;
+}
+
+.massive-title {
+    font-size: clamp(3rem, 10vw, 9rem);
+    line-height: 0.9;
+    letter-spacing: -0.05em;
+    font-family: var(--font-heading);
+}
+
+.case-study-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    align-items: start;
+    
+}
+
+.visual-column {
+    position: sticky;
+    top: 80px;
+}
+
+
+.sticky-visual-wrapper {
+    position: sticky;
+    top: 15vh;
+    
+    height: 70vh;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    background: #f0f0f0;
+    border: 1px solid #e5e5e5;
+}
+
+.case-study-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.visual-badge {
+    position: absolute;
+    bottom: 2rem;
+    left: 2rem;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 0.5rem 1.5rem;
+    border-radius: var(--radius-pill);
+    font-size: 0.85rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    backdrop-filter: blur(10px);
+}
+
+
+.content-column {
+    display: flex;
+    flex-direction: column;
+    gap: 8rem;
+    
+    padding-bottom: 10vh;
+    
+}
+
+.case-block {
+    max-width: 500px;
+}
+
+.block-number {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    color: var(--color-brand);
+    display: block;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.case-block h3 {
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.case-block p {
+    font-size: 1.15rem;
+    color: #555;
+    line-height: 1.7;
+}
+
+
+@media (max-width: 992px) {
+    .case-study-grid {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+    }
+
+    .sticky-visual-wrapper {
+        position: relative;
+        
+        top: 0;
+        height: 50vh;
+    }
+
+    .content-column {
+        gap: 4rem;
+        padding-bottom: 0;
+    }
+}
+@media (max-width:768px) {
+    .visual-column {
+        position: relative;
+        margin-bottom: 40px;
+    }
+}
+/* =========================================
+   SERVICES: SPLIT-STANCE FAQ
+   ========================================= */
+.faq-section {
+    padding: 10rem 5%;
+    background-color: #fcfcfc;
+    color: #1a1a1a;
+}
+
+.faq-container {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 6rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+
+.sticky-faq-header {
+    position: sticky;
+    top: 20vh;
+}
+
+.massive-title-sm {
+    font-size: clamp(3rem, 6vw, 5rem);
+    line-height: 1;
+    letter-spacing: -0.04em;
+    margin: 1.5rem 0;
+}
+
+.sticky-faq-header p {
+    color: #666;
+    font-size: 1.1rem;
+    max-width: 300px;
+}
+
+
+.faq-list-col {
+    border-top: 2px solid #1a1a1a;
+}
+
+.faq-item {
+    border-bottom: 2px solid #1a1a1a;
+    overflow: hidden;
+}
+
+.faq-question {
+    padding: 2.5rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: padding-left 0.4s cubic-bezier(0.16, 1, 0.3, 1), color 0.3s ease;
+}
+
+.faq-question h3 {
+    font-size: clamp(1.5rem, 3vw, 2.2rem);
+    font-weight: 500;
+    margin: 0;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+
+.faq-item:hover .faq-question {
+    padding-left: 2rem;
+    color: var(--color-brand);
+}
+
+
+.faq-icon {
+    position: relative;
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+}
+
+.faq-icon span {
+    position: absolute;
+    background: #1a1a1a;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), background 0.3s ease;
+}
+
+
+.faq-icon span:nth-child(1) {
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    transform: translateY(-50%);
+}
+
+
+.faq-icon span:nth-child(2) {
+    top: 0;
+    left: 50%;
+    width: 2px;
+    height: 100%;
+    transform: translateX(-50%);
+}
+
+.faq-item:hover .faq-icon span {
+    background: var(--color-brand);
+}
+
+
+.faq-item.active .faq-icon span:nth-child(2) {
+    transform: translateX(-50%) rotate(90deg);
+}
+
+
+.faq-answer {
+    height: 0;
+    
+    overflow: hidden;
+}
+
+.answer-inner {
+    padding-bottom: 2.5rem;
+    padding-left: 2rem;
+    
+    max-width: 600px;
+}
+
+.answer-inner p {
+    font-size: 1.15rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+
+@media (max-width: 992px) {
+    .faq-container {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+    }
+
+    .sticky-faq-header {
+        position: relative;
+        top: 0;
+    }
+
+    .faq-item:hover .faq-question {
+        padding-left: 1rem;
+    }
+
+    
+    .answer-inner {
+        padding-left: 1rem;
+    }
+}

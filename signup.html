@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System Login | Stackly Ticketing</title>
+    <link rel="stylesheet" href="signup.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <section class="signup-section">
+        <div class="signup-grid">
+
+            <div class="signup-meta">
+                <a href="index.html" class="meta-logo">
+                    <img src="./assets/Stackly-logo-Blue.webp" alt="Logo" loading="lazy">
+                </a>
+                <span class="badge-outline">System Provisioning</span>
+                <h1 class="meta-title">Engineer your<br>support flow.</h1>
+
+                <ul class="benefit-list">
+                    <li>
+                        <span class="material-icons-outlined">speed</span>
+                        <div>
+                            <strong>Sub-millisecond Routing</strong>
+                            <p>Handle peak volumes with zero latency.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="material-icons-outlined">psychology</span>
+                        <div>
+                            <strong>AI-Driven Triage</strong>
+                            <p>Automate categorization and agent routing.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="material-icons-outlined">api</span>
+                        <div>
+                            <strong>API-First Architecture</strong>
+                            <p>Integrate seamlessly into your existing stack.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="signup-form-surface">
+                <div class="form-header">
+                    <h2>Create Workspace</h2>
+                    <p>Already have an account? <a href="login.html">Log in here</a></p>
+                </div>
+
+                <form id="signupForm" class="dark-form">
+
+                    <div class="field-row">
+                        <div class="form-group-solid floating">
+                            <input type="text" id="firstName" placeholder=" " required>
+                            <label for="firstName">First Name</label>
+                        </div>
+                        <div class="form-group-solid floating">
+                            <input type="text" id="lastName" placeholder=" " required>
+                            <label for="lastName">Last Name</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group-solid floating">
+                        <input type="text" id="workspace" placeholder=" " required>
+                        <label for="workspace">Workspace Name (e.g. Acme Corp)</label>
+                    </div>
+
+                    <div class="form-group-solid floating">
+                        <input type="email" id="email" placeholder=" " required>
+                        <label for="email">Work Email</label>
+                    </div>
+
+                    <div class="field-row">
+                        <div class="form-group-solid floating">
+                            <input type="password" id="password" placeholder=" " required>
+                            <label for="password">Password</label>
+                        </div>
+                        <div class="form-group-solid floating">
+                            <input type="password" id="confirmPassword" placeholder=" " required>
+                            <label for="confirmPassword">Confirm Password</label>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="submit-btn-dark" id="signupSubmit">
+                        Initialize Workspace
+                    </button>
+
+                    <div id="signupFeedback" class="form-feedback"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+
+            const tl = gsap.timeline();
+
+
+            tl.from(".signup-meta > *", {
+                x: -40,
+                opacity: 0,
+                duration: 0.8,
+                stagger: 0.1,
+                ease: "power3.out"
+            })
+
+                .from(".form-header, .form-group-solid", {
+                    y: 30,
+                    opacity: 0,
+                    duration: 0.8,
+                    stagger: 0.08,
+                    ease: "power2.out"
+                }, "-=0.6");
+
+            const signupForm = document.getElementById('signupForm');
+            const feedback = document.getElementById('signupFeedback');
+            const formSurface = document.querySelector('.signup-form-surface');
+
+            signupForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+
+                const firstName = document.getElementById('firstName').value.trim();
+                const email = document.getElementById('email').value.trim();
+                const pwd = document.getElementById('password').value;
+                const confirmPwd = document.getElementById('confirmPassword').value;
+
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+
+                gsap.set(feedback, { opacity: 0, y: 10 });
+
+
+                const triggerError = (msg) => {
+                    feedback.textContent = msg;
+                    feedback.className = "form-feedback error";
+                    gsap.to(formSurface, { x: -8, duration: 0.08, repeat: 5, yoyo: true, onComplete: () => gsap.set(formSurface, { x: 0 }) });
+                    gsap.to(feedback, { opacity: 1, y: 0, duration: 0.3 });
+                };
+
+
+                if (!firstName || !emailRegex.test(email)) {
+                    triggerError("Please provide a valid name and email address.");
+                    return;
+                }
+
+
+                if (pwd.length < 8) {
+                    triggerError("Password must be at least 8 characters long.");
+                    return;
+                }
+
+
+                if (pwd !== confirmPwd) {
+                    triggerError("Passwords do not match. Please verify.");
+
+                    gsap.to("#confirmPassword", { borderColor: "#ff4d4d", duration: 0.2, yoyo: true, repeat: 3, onComplete: () => gsap.set("#confirmPassword", { clearProps: "borderColor" }) });
+                    return;
+                }
+
+                window.location.href = 'login.html'
+            });
+        });
+    </script>
+</body>
+
+</html>

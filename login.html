@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System Login | Stackly Ticketing</title>
+    <link rel="stylesheet" href="login.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <section class="auth-section">
+        <div class="auth-card">
+
+
+            <div class="auth-header">
+                <a href="index.html" class="back-link"><span class="material-icons-outlined">
+                        arrow_back
+                    </span> Back to Site</a>
+                <span class="badge-outline">Stackly Access</span>
+                <h2>System Login</h2>
+                <p>Enter your credentials to access the ticketing workspace.</p>
+            </div>
+
+
+            <form id="authForm" class="auth-form">
+
+
+                <div class="role-selector">
+                    <input type="radio" id="roleAgent" name="role" value="Agent" checked>
+                    <label for="roleAgent" class="role-label">Support Agent</label>
+
+                    <input type="radio" id="roleAdmin" name="role" value="Admin">
+                    <label for="roleAdmin" class="role-label">System Admin</label>
+
+                    <div class="role-slider"></div>
+                </div>
+
+
+                <div class="form-group floating">
+                    <input type="text" id="username" placeholder=" " required>
+                    <label for="username">Workspace Username</label>
+                </div>
+
+                <div class="form-group floating">
+                    <input type="email" id="email" placeholder=" " required>
+                    <label for="email">Work Email</label>
+                </div>
+
+                <div class="form-group floating">
+                    <input type="password" id="password" placeholder=" " required>
+                    <label for="password">Password</label>
+                </div>
+
+                <button type="submit" class="submit-btn-premium" id="authSubmit">
+                    Initialize Session
+                </button>
+
+                <div id="authFeedback" class="form-feedback"></div>
+            </form>
+
+
+            <div class="auth-footer">
+                <p>Need to provision a new workspace? <a href="signup.html">Request Access</a></p>
+            </div>
+
+        </div>
+    </section>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+
+
+            const tl = gsap.timeline();
+
+            tl.from(".auth-card", {
+                y: 40,
+                opacity: 0,
+                scale: 0.98,
+                duration: 1,
+                ease: "power4.out"
+            })
+                .from(".auth-header > *", {
+                    y: 10,
+                    opacity: 0,
+                    duration: 0.6,
+                    stagger: 0.1,
+                    ease: "power2.out"
+                }, "-=0.6")
+                .from(".role-selector, .form-group, .submit-btn-premium", {
+                    y: 15,
+                    opacity: 0,
+                    duration: 0.6,
+                    stagger: 0.1,
+                    ease: "power2.out"
+                }, "-=0.4")
+                .from(".auth-footer", {
+                    opacity: 0,
+                    duration: 0.6
+                }, "-=0.2");
+
+
+            const authForm = document.getElementById('authForm');
+            const authCard = document.querySelector('.auth-card');
+            const feedback = document.getElementById('authFeedback');
+
+            authForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+
+
+                const username = document.getElementById('username').value.trim();
+                const email = document.getElementById('email').value.trim();
+                const password = document.getElementById('password').value;
+                const role = document.querySelector('input[name="role"]:checked').value;
+
+
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+
+                gsap.set(feedback, { opacity: 0, display: "none" });
+
+
+                const triggerError = (msg) => {
+                    feedback.textContent = msg;
+                    feedback.className = "form-feedback error";
+
+
+                    gsap.to(authCard, {
+                        x: -10,
+                        duration: 0.08,
+                        repeat: 5,
+                        yoyo: true,
+                        onComplete: () => gsap.set(authCard, { x: 0 })
+                    });
+                    gsap.to(feedback, { opacity: 1, display: "block", duration: 0.3 });
+                };
+
+
+                if (!username || !password || !emailRegex.test(email)) {
+                    triggerError("Invalid credentials. Please verify your inputs.");
+                    return;
+                }
+
+                if (password.length < 8) {
+                    triggerError("Password must be at least 8 characters.");
+                    return;
+                }
+
+
+                feedback.textContent = `Authenticating ${role} profile...`;
+                feedback.className = "form-feedback success";
+
+                gsap.to(feedback, { opacity: 1, display: "block", duration: 0.3 });
+                localStorage.setItem("UserName", username);
+                localStorage.setItem("userEmail", email);
+                if (role == "Admin") {
+                    window.location.href = 'admin-dashboard.html'
+                }
+                else if (role == 'Agent') {
+                    window.location.href = 'user-dashboard.html'
+                }
+                else {
+                    alert("Invalid Role");
+                    window.location.href = '404page.html';
+                }
+
+                const successTl = gsap.timeline();
+                successTl.to(authForm, { opacity: 0, duration: 0.4, delay: 0.5 })
+                    .call(() => {
+
+                        console.log(`Success! Logged in as: ${username}, Role: ${role}`);
+
+                    });
+            });
+        });
+    </script>
+
+</body>
+
+</html>

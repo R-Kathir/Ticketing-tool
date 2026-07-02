@@ -1,0 +1,215 @@
+/* =========================================
+   404 PAGE - CINEMATIC & BRUTALIST
+   ========================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #050505;
+    color: #ffffff;
+    overflow: hidden;
+}
+
+.not-found-section {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+}
+
+/* Background Effects */
+.noise-overlay {
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    opacity: 0.03;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.grid-overlay {
+    position: absolute;
+    inset: 0;
+    background-size: 40px 40px;
+    background-image:
+        linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Content Container */
+.not-found-content {
+    position: relative;
+    z-index: 10;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.badge-outline {
+    display: inline-block;
+    padding: 0.3rem 0.8rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50px;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #888;
+    margin-bottom: 2rem;
+}
+
+/* 404 Glitch Effect */
+.glitch-title {
+    font-size: clamp(6rem, 15vw, 12rem);
+    font-weight: 800;
+    line-height: 1;
+    margin: 0;
+    letter-spacing: -0.05em;
+    position: relative;
+    color: #ffffff;
+}
+
+.glitch-title::before,
+.glitch-title::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #050505;
+}
+
+.glitch-title::before {
+    left: 4px;
+    text-shadow: -2px 0 #d93025;
+    clip: rect(44px, 450px, 56px, 0);
+    animation: glitch-anim 5s infinite linear alternate-reverse;
+}
+
+.glitch-title::after {
+    left: -4px;
+    text-shadow: -2px 0 #3b82f6;
+    clip: rect(44px, 450px, 56px, 0);
+    animation: glitch-anim2 5s infinite linear alternate-reverse;
+}
+
+@keyframes glitch-anim {
+    0% {
+        clip: rect(34px, 9999px, 14px, 0);
+    }
+
+    20% {
+        clip: rect(74px, 9999px, 5px, 0);
+    }
+
+    40% {
+        clip: rect(2px, 9999px, 89px, 0);
+    }
+
+    60% {
+        clip: rect(96px, 9999px, 34px, 0);
+    }
+
+    80% {
+        clip: rect(23px, 9999px, 76px, 0);
+    }
+
+    100% {
+        clip: rect(45px, 9999px, 12px, 0);
+    }
+}
+
+@keyframes glitch-anim2 {
+    0% {
+        clip: rect(65px, 9999px, 100px, 0);
+    }
+
+    20% {
+        clip: rect(12px, 9999px, 43px, 0);
+    }
+
+    40% {
+        clip: rect(89px, 9999px, 12px, 0);
+    }
+
+    60% {
+        clip: rect(45px, 9999px, 78px, 0);
+    }
+
+    80% {
+        clip: rect(12px, 9999px, 34px, 0);
+    }
+
+    100% {
+        clip: rect(89px, 9999px, 56px, 0);
+    }
+}
+
+/* Typography */
+.sub-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin: 1rem 0;
+    letter-spacing: -0.02em;
+}
+
+.description {
+    color: #888;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 3rem;
+    max-width: 480px;
+}
+
+/* Buttons */
+.action-group {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.btn-primary,
+.btn-ghost {
+    padding: 1rem 1.5rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background: #ffffff;    
+    color: #050505;
+    border: none;
+}
+
+.btn-primary:hover {
+    background: #e5e5e5;
+    transform: translateY(-2px);
+}
+
+.btn-ghost {
+    background: transparent;
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.btn-ghost:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.4);
+}

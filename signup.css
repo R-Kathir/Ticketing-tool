@@ -1,0 +1,217 @@
+/* =========================================
+   SIGNUP PAGE: SPLIT DARK MODE
+   ========================================= */
+.signup-section {
+    min-height: 100vh;
+    background: #050505;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+}
+
+.signup-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    min-height: 100vh;
+}
+
+
+.signup-meta {
+    padding: 6rem 10%;
+    background: #0a0a0a;
+    border-right: 1px solid #1a1a1a;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.meta-logo img {
+    width: 140px;
+    margin: 10px;
+}
+
+.meta-title {
+    font-size: clamp(3rem, 5vw, 4.5rem);
+    line-height: 1;
+    margin: 1.5rem 0 3rem;
+    letter-spacing: -0.03em;
+}
+
+.benefit-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.benefit-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+}
+
+.benefit-list .material-icons-outlined {
+    font-size: 2rem;
+    color: var(--color-brand, #888);
+}
+
+.benefit-list strong {
+    display: block;
+    font-size: 1.1rem;
+    margin-bottom: 0.3rem;
+}
+
+.benefit-list p {
+    color: #888;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+
+.signup-form-surface {
+    padding: 6rem 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #050505;
+}
+
+.form-header {
+    margin-bottom: 3rem;
+}
+
+.form-header h2 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.form-header p,
+.form-header a {
+    color: #888;
+    font-size: 0.95rem;
+}
+
+.form-header a {
+    color: #fff;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+
+.field-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.form-group-solid {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.form-group-solid input {
+    width: 100%;
+    padding: 1.5rem 1rem 0.8rem;
+    background: #111111;
+    border: 1px solid #5a5959;
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.form-group-solid label {
+    position: absolute;
+    top: 1.2rem;
+    left: 1rem;
+    font-size: 0.95rem;
+    color: #666;
+    pointer-events: none;
+    transition: 0.2s ease all;
+}
+
+
+.form-group-solid input:focus~label,
+.form-group-solid input:not(:placeholder-shown)~label {
+    top: 0.5rem;
+    font-size: 0.7rem;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.form-group-solid input:focus {
+    outline: none;
+    border-color: #929292;
+    background: #161616;
+}
+
+.submit-btn-dark {
+    width: 100%;
+    padding: 1.2rem;
+    background: #ffffff;
+    color: #000000;
+    border: none;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: transform 0.2s ease, opacity 0.3s ease;
+}
+
+.submit-btn-dark:hover {
+    opacity: 0.9;
+}
+
+
+.form-feedback {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-align: center;
+    opacity: 0;
+    display: none;
+}
+
+.form-feedback.error {
+    display: block;
+    background: rgba(217, 48, 37, 0.1);
+    color: #ff4d4d;
+    border: 1px solid rgba(217, 48, 37, 0.2);
+}
+
+.form-feedback.success {
+    display: block;
+    background: rgba(30, 142, 62, 0.1);
+    color: #4dff88;
+    border: 1px solid rgba(30, 142, 62, 0.2);
+}
+
+@media (max-width: 992px) {
+    .signup-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .signup-meta {
+        padding: 4rem 5%;
+        border-right: none;
+        border-bottom: 1px solid #1a1a1a;
+    }
+
+    .signup-form-surface {
+        padding: 4rem 5%;
+    }
+}
+@media (max-width:678px) {
+    .field-row{
+        grid-template-columns: 1fr;
+    }
+    .dark-form{
+        width: 90%;
+    }
+}

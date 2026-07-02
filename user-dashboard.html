@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agent Dashboard | Stackly</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+</head>
+
+<body class="dashboard-body">
+
+
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+
+    <aside class="sidebar" id="sidebar">
+        <a href="index.html" class="sidebar-header">
+            <img src="./assets/Stackly-logo-Blue.webp" alt="logo" class="logo">
+        </a>
+
+        <nav class="sidebar-nav">
+
+            <button class="nav-item active" data-target="view-overview">
+                <span class="material-icons-outlined">dashboard</span>
+                Overview
+            </button>
+
+            <button class="nav-item" data-target="view-queue">
+                <span class="material-icons-outlined">confirmation_number</span>
+                Active Queue
+            </button>
+
+            <button class="nav-item" data-target="view-customers">
+                <span class="material-icons-outlined">people</span>
+                Customer Base
+            </button>
+
+            <button class="nav-item" data-target="view-settings">
+                <span class="material-icons-outlined">settings</span>
+                System Config
+            </button>
+        </nav>
+
+        <div class="sidebar-footer">
+            <button onclick="window.location.href='login.html'" class="nav-item text-danger">
+                <span class="material-icons-outlined">logout</span>
+                Disconnect
+            </button>
+        </div>
+    </aside>
+
+
+    <main class="main-workspace">
+
+
+        <header class="workspace-header">
+
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <span class="material-icons-outlined">menu</span>
+            </button>
+
+            <div class="header-welcome">
+                <h1>Welcome <span id="Username"></span></h1>
+            </div>
+
+            <div class="header-profile">
+
+                <div class="profile-card" id="profileCard">
+
+                    <div class="profile-avatar">
+                        A
+                    </div>
+
+                    <div class="profile-details">
+                        <h4 id="agentName">Agent</h4>
+                        <p id="agentEmail">agent@nexusdesk.com</p>
+                    </div>
+
+                    <span class="material-icons-outlined profile-arrow">
+                        expand_more
+                    </span>
+
+                </div>
+
+                <!-- Dropdown -->
+
+                <div class="profile-dropdown" id="profileDropdown">
+
+                    <div class="dropdown-user-info">
+
+                        <div class="dropdown-avatar">
+                            A
+                        </div>
+
+                        <div class="dropdown-details">
+                            <h4 id="dropdownAgentName">Agent</h4>
+                            <p id="dropdownAgentEmail">agent@nexusdesk.com</p>
+                        </div>
+
+                    </div>
+
+                    <hr>
+
+                    <a href="404page.html">
+                        <span class="material-icons-outlined">person</span>
+                        My Profile
+                    </a>
+
+                    <a href="404page.html">
+                        <span class="material-icons-outlined">settings</span>
+                        Settings
+                    </a>
+
+                    <a href="404page.html">
+                        <span class="material-icons-outlined">password</span>
+                        Change Password
+                    </a>
+
+                    <hr>
+
+                    <a href="login.html" class="logout-link">
+                        <span class="material-icons-outlined">logout</span>
+                        Logout
+                    </a>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <div class="workspace-content">
+
+
+            <div id="view-overview" class="view-panel active">
+                <div class="view-header">
+                    <h1>Command Center</h1>
+                    <p>Real-time overview of your support operations.</p>
+                </div>
+
+
+                <div class="dashboard-grid">
+
+                    <section class="dash-section metric-grid">
+                        <div class="metric-card">
+                            <span class="label">Unresolved</span>
+                            <span class="val">24</span>
+                        </div>
+                        <div class="metric-card">
+                            <span class="label">Avg Response Time</span>
+                            <span class="val">12m</span>
+                        </div>
+                        <div class="metric-card">
+                            <span class="label">SLA Breaches</span>
+                            <span class="val danger">0</span>
+                        </div>
+                    </section>
+
+
+                    <section class="dash-section span-2">
+                        <div class="section-head">
+                            <h3>Triage Inbox</h3>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="minimal-table">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Subject</th>
+                                        <th>Status</th>
+                                        <th>Time</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>#1042</td>
+                                        <td>API Gateway Timeout</td>
+                                        <td><span class="status warning">Pending</span></td>
+                                        <td>2m ago</td>
+                                    </tr>
+                                    <tr>
+                                        <td>#1041</td>
+                                        <td>Payment Gateway Failure</td>
+                                        <td><span class="status critical">Urgent</span></td>
+                                        <td>14m ago</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+
+
+                    <section class="dash-section">
+                        <div class="section-head">
+                            <h3>System Feed</h3>
+                        </div>
+                        <ul class="activity-feed">
+                            <li><strong>System</strong> assigned #1042 to you.</li>
+                            <li><strong>Alex M.</strong> resolved #1039.</li>
+                            <li><strong>Deployment</strong> completed successfully.</li>
+                        </ul>
+                    </section>
+
+
+                    <section class="dash-section span-2">
+                        <div class="section-head">
+                            <h3>Quick Actions</h3>
+                        </div>
+                        <div class="action-grid">
+                            <button onclick="window.location.href='404page.html'" class="btn-ghost">Create
+                                Ticket</button>
+                            <button onclick="window.location.href='404page.html'" class="btn-ghost">View SLA
+                                Reports</button>
+                            <button onclick="window.location.href='404page.html'" class="btn-ghost">Trigger
+                                PagerDuty</button>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+
+            <div id="view-queue" class="view-panel">
+                <div class="view-header">
+                    <h1>Active Queue</h1>
+                    <p>Manage, assign, and resolve open tickets.</p>
+                </div>
+
+                <div class="dashboard-grid">
+
+                    <section class="dash-section">
+                        <div class="section-head">
+                            <h3>View Filters</h3>
+                        </div>
+                        <div class="filter-group">
+                            <div class="input-select">
+                                <label>Status</label>
+                                <select>
+                                    <option>Open & Pending</option>
+                                    <option>Unassigned</option>
+                                    <option>Recently Solved</option>
+                                </select>
+                            </div>
+                            <div class="input-select">
+                                <label>Priority</label>
+                                <select>
+                                    <option>All Priorities</option>
+                                    <option>Urgent</option>
+                                    <option>High</option>
+                                </select>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="dash-section">
+                        <div class="section-head">
+                            <h3>Quick Details</h3>
+                            <span class="badge-outline">#1042</span>
+                        </div>
+                        <div class="ticket-preview">
+                            <div class="requester-info">
+                                <div class="avatar-small">JD</div>
+                                <div>
+                                    <strong>John Doe</strong>
+                                    <span>Acme Corp</span>
+                                </div>
+                            </div>
+                            <p class="ticket-snippet">"The API gateway is returning 504 timeouts on the production
+                                endpoint..."</p>
+                            <div class="quick-reply">
+                                <textarea placeholder="Type a quick internal note..." rows="2"></textarea>
+                                <button class="btn-ghost small">Add Note</button>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="dash-section span-2">
+                        <div class="section-head">
+                            <h3>Ticket List (4)</h3>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="queue-table">
+                                <thead>
+                                    <tr>
+                                        <th><input type="checkbox"></th>
+                                        <th>ID</th>
+                                        <th>Subject</th>
+                                        <th>Requester</th>
+                                        <th>Priority</th>
+                                        <th>SLA</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="active-row">
+                                        <td><input type="checkbox" checked></td>
+                                        <td>#1042</td>
+                                        <td><strong>API Gateway Timeout</strong></td>
+                                        <td>John Doe</td>
+                                        <td><span class="status critical">Urgent</span></td>
+                                        <td><span class="text-danger">12m left</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox"></td>
+                                        <td>#1044</td>
+                                        <td><strong>Billing cycle failure</strong></td>
+                                        <td>Sarah Smith</td>
+                                        <td><span class="status warning">High</span></td>
+                                        <td>4h left</td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox"></td>
+                                        <td>#1045</td>
+                                        <td><strong>SSO Integration Error</strong></td>
+                                        <td>Tech Lead</td>
+                                        <td><span class="status normal">Normal</span></td>
+                                        <td>24h left</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+
+                    <section class="dash-section span-2">
+                        <div class="section-head">
+                            <h3>Bulk Macro Actions</h3>
+                        </div>
+                        <div class="macro-grid">
+                            <button onclick="window.location.href='404page.html'" class="macro-btn">
+                                <span class="material-icons-outlined">done_all</span>
+                                Mark as Solved
+                            </button>
+                            <button onclick="window.location.href='404page.html'" class="macro-btn">
+                                <span class="material-icons-outlined">person_add</span>
+                                Assign to Me
+                            </button>
+                            <button onclick="window.location.href='404page.html'" class="macro-btn">
+                                <span class="material-icons-outlined">local_offer</span>
+                                Apply "Bug" Tag
+                            </button>
+                            <button onclick="window.location.href='404page.html'" class="macro-btn danger-action">
+                                <span class="material-icons-outlined">warning</span>
+                                Escalate to Tier 2
+                            </button>
+                        </div>
+                    </section>
+
+                </div>
+            </div>
+
+
+            <div id="view-customers" class="view-panel">
+                <div class="view-header">
+                    <h1>Customer Base</h1>
+                    <p>Manage organizations, track account health, and identify churn risks.</p>
+                </div>
+
+                <div class="dashboard-grid">
+
+                    <section class="dash-section span-2">
+                        <div class="filter-pills">
+                            <button onclick="window.location.href='404page.html'" class="pill active">All
+                                Customers</button>
+                            <button onclick="window.location.href='404page.html'" class="pill">Enterprise</button>
+                            <button onclick="window.location.href='404page.html'" class="pill">SMB</button>
+                            <button onclick="window.location.href='404page.html'" class="pill alert-pill">At
+                                Risk</button>
+                        </div>
+                    </section>
+
+                    <section class="dash-section">
+                        <div class="section-head">
+                            <h3>Recently Active Contacts</h3>
+                        </div>
+                        <ul class="contact-list">
+                            <li>
+                                <div class="contact-profile">
+                                    <div class="avatar-small online">JD</div>
+                                    <div class="contact-info">
+                                        <strong>John Doe</strong>
+                                        <span>Acme Corp</span>
+                                    </div>
+                                </div>
+                                <button onclick="window.location.href='404page.html'" class="icon-btn"
+                                    title="View Tickets"><span
+                                        class="material-icons-outlined">open_in_new</span></button>
+                            </li>
+                            <li>
+                                <div class="contact-profile">
+                                    <div class="avatar-small online">SW</div>
+                                    <div class="contact-info">
+                                        <strong>Sarah Wong</strong>
+                                        <span>Stark Industries</span>
+                                    </div>
+                                </div onclick="window.location.href='404page.html'">
+                                <button onclick="window.location.href='404page.html'" class="icon-btn"><span
+                                        class="material-icons-outlined">open_in_new</span></button>
+                            </li>
+                            <li>
+                                <div class="contact-profile">
+                                    <div class="avatar-small">MR</div>
+                                    <div class="contact-info">
+                                        <strong>Mike Ross</strong>
+                                        <span>Pearson Hardman</span>
+                                    </div>
+                                </div>
+                                <button onclick="window.location.href='404page.html'" class="icon-btn"><span
+                                        class="material-icons-outlined">open_in_new</span></button>
+                            </li>
+                        </ul>
+                    </section>
+
+                    <section class="dash-section">
+                        <div class="section-head">
+                            <h3>Account Health Index</h3>
+                        </div>
+                        <div class="health-metrics">
+
+                            <div class="health-row">
+                                <div class="health-meta">
+                                    <strong>Wayne Enterprises</strong>
+                                    <span class="status normal">98%</span>
+                                </div>
+                                <div class="progress-track">
+                                    <div class="progress-fill healthy" style="width: 98%;"></div>
+                                </div>
+                            </div>
+
+                            <div class="health-row">
+                                <div class="health-meta">
+                                    <strong>Acme Corp</strong>
+                                    <span class="status warning">72%</span>
+                                </div>
+                                <div class="progress-track">
+                                    <div class="progress-fill warning" style="width: 72%;"></div>
+                                </div>
+                            </div>
+
+                            <div class="health-row">
+                                <div class="health-meta">
+                                    <strong>Globex Corp</strong>
+                                    <span class="status critical">41%</span>
+                                </div>
+                                <div class="progress-track">
+                                    <div class="progress-fill critical" style="width: 41%;"></div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </section>
+
+                    <section class="dash-section span-2">
+                        <div class="section-head">
+                            <h3>Organization Directory</h3>
+                            <button onclick="window.location.href='404page.html'" class="btn-ghost small">Add
+                                Organization</button>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="minimal-table">
+                                <thead>
+                                    <tr>
+                                        <th>Organization</th>
+                                        <th>Tier</th>
+                                        <th>Active Users</th>
+                                        <th>Open Tickets</th>
+                                        <th>ARR</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>Wayne Enterprises</strong><br><span
+                                                class="text-muted">wayne.com</span></td>
+                                        <td><span class="badge-outline">Enterprise</span></td>
+                                        <td>142</td>
+                                        <td>3</td>
+                                        <td>$120k</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Acme Corp</strong><br><span class="text-muted">acme.io</span></td>
+                                        <td><span class="badge-outline">Growth</span></td>
+                                        <td>45</td>
+                                        <td>12</td>
+                                        <td>$45k</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Globex Corp</strong><br><span class="text-muted">globex.net</span>
+                                        </td>
+                                        <td><span class="badge-outline">Startup</span></td>
+                                        <td>12</td>
+                                        <td><span class="text-danger">8</span></td>
+                                        <td>$12k</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+
+                </div>
+            </div>
+
+            <div id="view-settings" class="view-panel">
+
+                <div class="dashboard-grid">
+
+
+                    <section class="dash-section">
+
+                        <div class="section-title">
+                            <h3>Profile Information</h3>
+                        </div>
+
+                        <div class="settings-group">
+
+                            <div class="form-group">
+                                <label>Full Name</label>
+                                <input type="text" value="Alex Johnson">
+                            </div>
+
+                            <div class="form-group">
+                                <label>Email Address</label>
+                                <input type="email" value="alex@nexusdesk.com">
+                            </div>
+
+                            <div class="form-group">
+                                <label>Department</label>
+                                <input type="text" value="Technical Support" readonly>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Role</label>
+                                <input type="text" value="Support Agent" readonly>
+                            </div>
+
+                            <button onclick="window.location.href='404page.html'" class="action-btn">
+                                Save Changes
+                            </button>
+
+                        </div>
+
+                    </section>
+
+
+                    <section class="dash-section">
+
+                        <div class="section-title">
+                            <h3>Preferences</h3>
+                        </div>
+
+                        <div class="settings-list">
+
+                            <div class="setting-item">
+                                <div>
+                                    <h4>Email Notifications</h4>
+                                    <p>Receive ticket updates by email.</p>
+                                </div>
+
+                                <label class="switch">
+                                    <input type="checkbox" checked>
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+
+                            <div class="setting-item">
+                                <div>
+                                    <h4>Desktop Notifications</h4>
+                                    <p>Show browser notifications.</p>
+                                </div>
+
+                                <label class="switch">
+                                    <input type="checkbox" checked>
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+
+                            <div class="setting-item">
+                                <div>
+                                    <h4>Dark Mode</h4>
+                                    <p>Enable dark interface.</p>
+                                </div>
+
+                                <label class="switch">
+                                    <input type="checkbox">
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+
+                            <div class="setting-item">
+                                <div>
+                                    <h4>Auto Assign Tickets</h4>
+                                    <p>Automatically receive new tickets.</p>
+                                </div>
+
+                                <label class="switch">
+                                    <input type="checkbox">
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+
+                        </div>
+
+                    </section>
+
+                    <section class="dash-section span-2">
+
+                        <div class="section-title">
+                            <h3>API Tokens</h3>
+
+                            <button onclick="window.location.href='404page.html'" class="action-btn">
+                                Generate Token
+                            </button>
+
+                        </div>
+
+                        <table class="data-table">
+
+                            <thead>
+                                <tr>
+                                    <th>Token Name</th>
+                                    <th>Created</th>
+                                    <th>Last Used</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+
+                                <tr>
+                                    <td>Primary API Key</td>
+                                    <td>12 Jun 2026</td>
+                                    <td>Today</td>
+                                    <td><span class="badge success">Active</span></td>
+                                </tr>
+
+                                <tr>
+                                    <td>Reporting Service</td>
+                                    <td>05 May 2026</td>
+                                    <td>Yesterday</td>
+                                    <td><span class="badge warning">Limited</span></td>
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </section>
+
+                    <!-- ================= Security ================= -->
+
+                    <section class="dash-section span-2">
+
+                        <div class="section-title">
+                            <h3>Security & Account</h3>
+                        </div>
+
+                        <div class="security-list">
+
+                            <div class="security-item">
+                                <div>
+                                    <h4>Password</h4>
+                                    <p>Last changed 18 days ago.</p>
+                                </div>
+
+                                <button onclick="window.location.href='404page.html'" class="secondary-btn">
+                                    Change Password
+                                </button>
+                            </div>
+
+                            <div class="security-item">
+                                <div>
+                                    <h4>Two-Factor Authentication</h4>
+                                    <p>Add an extra layer of security.</p>
+                                </div>
+
+                                <button onclick="window.location.href='404page.html'" class="secondary-btn">
+                                    Enable
+                                </button>
+                            </div>
+
+                            <div class="security-item">
+                                <div>
+                                    <h4>Active Sessions</h4>
+                                    <p>View devices currently signed in.</p>
+                                </div>
+
+                                <button onclick="window.location.href='404page.html'" class="secondary-btn">
+                                    Manage
+                                </button>
+                            </div>
+
+                            <hr>
+
+                            <div class="danger-zone">
+
+                                <div>
+                                    <h4>Danger Zone</h4>
+                                    <p>Permanently deactivate your account.</p>
+                                </div>
+
+                                <button onclick="window.location.href='404page.html'" class="danger-btn">
+                                    Deactivate Account
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </section>
+
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+
+            const navItems = document.querySelectorAll('.sidebar-nav .nav-item');
+            const views = document.querySelectorAll('.view-panel');
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('sidebarOverlay');
+
+            // 1. Initial Dashboard Load Animation
+            gsap.from(".view-panel.active .dash-section", {
+                y: 20,
+                opacity: 0,
+                duration: 0.6,
+                stagger: 0.1,
+                ease: "power2.out"
+            });
+
+            // 2. View Switching Logic
+            navItems.forEach(item => {
+                item.addEventListener('click', (e) => {
+                    // Remove active from all nav items
+                    navItems.forEach(nav => nav.classList.remove('active'));
+                    // Add active to clicked nav item
+                    e.currentTarget.classList.add('active');
+
+                    const targetId = e.currentTarget.getAttribute('data-target');
+
+                    // Switch views
+                    views.forEach(view => {
+                        if (view.id === targetId) {
+                            view.classList.add('active');
+
+                            // Animate the 4 sections entering the new view
+                            gsap.fromTo(view.querySelectorAll('.dash-section'),
+                                { y: 20, opacity: 0 },
+                                { y: 0, opacity: 1, duration: 0.5, stagger: 0.1, ease: "power2.out" }
+                            );
+                        } else {
+                            view.classList.remove('active');
+                        }
+                    });
+
+                    // If on mobile, close the sidebar after clicking a link
+                    if (window.innerWidth <= 768) {
+                        closeSidebar();
+                    }
+                });
+            });
+
+            // 3. Mobile Sidebar Toggle Logic
+            const openSidebar = () => {
+                sidebar.classList.add('open');
+                overlay.classList.add('active');
+            };
+
+            const closeSidebar = () => {
+                sidebar.classList.remove('open');
+                overlay.classList.remove('active');
+            };
+
+            mobileMenuBtn.addEventListener('click', openSidebar);
+            overlay.addEventListener('click', closeSidebar);
+
+            const profileCard = document.getElementById("profileCard");
+            const profileDropdown = document.getElementById("profileDropdown");
+
+            profileCard.addEventListener("click", (e) => {
+
+                e.stopPropagation();
+
+                profileDropdown.classList.toggle("show");
+                profileCard.classList.toggle("active");
+
+            });
+
+            document.addEventListener("click", () => {
+
+                profileDropdown.classList.remove("show");
+                profileCard.classList.remove("active");
+
+            });
+
+            // Load logged-in user
+            const displayName = localStorage.getItem("UserName") || "User";
+
+            const email = localStorage.getItem("userEmail") || "agent@nexusdesk.com";
+
+            const username = email.split("@")[0];
+            const initial = username.charAt(0).toUpperCase();
+
+            document.getElementById("agentName").textContent = username;
+            document.getElementById("agentEmail").textContent = email;
+
+            document.getElementById("dropdownAgentName").textContent = username;
+            document.getElementById("dropdownAgentEmail").textContent = email;
+
+            document.querySelector(".profile-avatar").textContent = initial;
+            document.querySelector(".dropdown-avatar").textContent = initial;
+            document.getElementById("Username").textContent = displayName;
+
+        });
+    </script>
+</body>
+
+</html>

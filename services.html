@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="Stackly Support Desk - A premium ticketing and issue tracking tool.">
+    <meta name="theme-color" content="#f5f5f7">
+
+    <title>Stackly | Support Desk</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+    <link rel="stylesheet" href="shared.css">
+    <link rel="stylesheet" href="services.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="./assets/Stackly-logo-Blue.webp" alt="Stackly Logo" loading="lazy">
+            </a>
+            <nav class="nav" id="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="services.html" class="nav-link active">Services</a></li>
+                    <li><a href="blog.html" class="nav-link">Blog</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+                <div class="nav-buttons">
+                    <a href="signup.html" class="btn btn-primary">
+                        Signup
+                    </a>
+                </div>
+            </nav>
+            <button class="menu-btn" id="menuBtn" aria-label="Toggle Menu">
+                <span class="material-icons-outlined">menu</span>
+            </button>
+        </div>
+    </header>
+    <section class="services-hero-glitch" id="services-hero">
+        <div class="hero-content">
+            <span class="badge-pill chip chip-primary">Technical Infrastructure</span>
+            <h1 class="glitch-title" id="glitchTitle">
+                <span class="glitch-line">Architecting</span>
+                <span class="glitch-line">the Support Logic.</span>
+            </h1>
+
+
+            <div class="hero-body-content">
+                <p class="hero-subtext">
+                    We transform chaotic support workflows into high-availability systems.
+                    Our engineering team builds custom ticketing engines, AI-driven triage
+                    pipelines, and API-first integrations designed for global, high-frequency operations.
+                </p>
+
+                <div class="hero-metrics">
+                    <div class="metric">
+                        <span class="val">99.9%</span>
+                        <span class="label">System Uptime</span>
+                    </div>
+                    <div class="metric">
+                        <span class="val">40ms</span>
+                        <span class="label">Triage Latency</span>
+                    </div>
+                    <div class="metric">
+                        <span class="val">100+</span>
+                        <span class="label">Custom Integrations</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="services-process" id="process">
+        <div class="process-container">
+
+            <div class="process-header">
+                <h2>The Engineering <span class="text-accent">Lifecycle</span></h2>
+            </div>
+
+            <div class="pipeline">
+
+                <div class="pipeline-line"></div>
+
+
+                <div class="step">
+                    <div class="step-dot"></div>
+                    <div class="step-content">
+                        <span class="step-number">01</span>
+                        <h3>Discovery & Architecture</h3>
+                        <p>We map your requirements to high-performance schemas, ensuring data integrity before a single
+                            line of code is written.</p>
+                    </div>
+                </div>
+
+
+                <div class="step">
+                    <div class="step-dot"></div>
+                    <div class="step-content">
+                        <span class="step-number">02</span>
+                        <h3>Rapid Development</h3>
+                        <p>Agile iteration using modular components to build features that are both robust and easily
+                            maintainable.</p>
+                    </div>
+                </div>
+
+
+                <div class="step">
+                    <div class="step-dot"></div>
+                    <div class="step-content">
+                        <span class="step-number">03</span>
+                        <h3>Optimization & Launch</h3>
+                        <p>Rigorous testing and performance tuning to ensure your deployment is ready for production at
+                            scale.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services-accordion-section" id="capabilities">
+        <div class="section-heading heading-center">
+            <span class="heading-overline">Core Capabilities</span>
+            <h2 style="color: rgb(220, 220, 220);">The Support Orchestration Suite</h2>
+        </div>
+
+        <div class="accordion-container">
+
+
+            <div class="acc-panel active" style="background-image: url('./assets/services2.webp');">
+                <div class="acc-overlay"></div>
+                <div class="acc-content">
+                    <div class="acc-vertical-title">
+                        <h3>Mobile</h3>
+                    </div>
+                    <div class="acc-details">
+                        <h3>Omnichannel Mobility</h3>
+                        <p>Deliver support where your customers live. Our Flutter-based mobile SDK ensures agents can
+                            triage, escalate, and resolve tickets on the move without compromising data security.</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="acc-panel" style="background-image: url('./assets/services3.webp');">
+                <div class="acc-overlay"></div>
+                <div class="acc-content">
+                    <div class="acc-vertical-title">
+                        <h3>Design</h3>
+                    </div>
+                    <div class="acc-details">
+                        <h3>Agent-Centric Workflows</h3>
+                        <p>We believe ticketing interfaces shouldn't feel like spreadsheets. We design high-focus agent
+                            workspaces that reduce cognitive load and accelerate resolution times.</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="acc-panel" style="background-image: url('./assets/services4.webp');">
+                <div class="acc-overlay"></div>
+                <div class="acc-content">
+                    <div class="acc-vertical-title">
+                        <h3>Backend</h3>
+                    </div>
+                    <div class="acc-details">
+                        <h3>High-Throughput Routing</h3>
+                        <p>Built for scale. Our engine manages millions of concurrent ticket events with sub-millisecond
+                            routing logic and robust database indexing to ensure zero downtime during peak volumes.</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="acc-panel" style="background-image: url('./assets/services5.webp');">
+                <div class="acc-overlay"></div>
+                <div class="acc-content">
+                    <div class="acc-vertical-title">
+                        <h3>Integrations</h3>
+                    </div>
+                    <div class="acc-details">
+                        <h3>AI-Driven Triage</h3>
+                        <p>Inject intelligence into every ticket. Automatically categorize, prioritize, and suggest
+                            responses using integrated LLMs that learn from your historical support data.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <section class="case-study-section" id="work">
+
+        <div class="case-study-header">
+            <span class="heading-overline">Featured Architecture</span>
+            <h2 class="massive-title">StacklyCore.</h2>
+        </div>
+
+        <div class="case-study-grid">
+
+            <div class="visual-column">
+                <div class="sticky-visual-wrapper">
+                    <img src="./assets/services1.webp   " alt="Enterprise Data Dashboard interface"
+                        class="case-study-img">
+                    <div class="visual-badge">Enterprise Cloud</div>
+                </div>
+            </div>
+
+
+            <div class="content-column">
+
+                <div class="case-block gs-fade">
+                    <span class="block-number">01</span>
+                    <h3>The Concept</h3>
+                    <p>A unified data platform engineered to aggregate real-time analytics across distributed teams,
+                        stripping away the friction of legacy enterprise software.</p>
+                </div>
+
+                <div class="case-block gs-fade">
+                    <span class="block-number">02</span>
+                    <h3>The Architecture</h3>
+                    <p>Built on a high-performance, event-driven microservices architecture to ensure seamless,
+                        zero-downtime scaling as user concurrency peaks globally.</p>
+                </div>
+
+                <div class="case-block gs-fade">
+                    <span class="block-number">03</span>
+                    <h3>The UI/UX Approach</h3>
+                    <p>Complex data requires zero visual friction. We utilized a brutalist-minimalist design language,
+                        removing all decorative elements to focus entirely on rapid data digestion.</p>
+                </div>
+
+                <div class="case-block gs-fade">
+                    <span class="block-number">04</span>
+                    <h3>The Result</h3>
+                    <p>A highly optimized, responsive ecosystem that reduces reporting latency by 80%, empowering teams
+                        to make split-second decisions with absolute confidence.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section class="faq-section" id="faq">
+        <div class="faq-container">
+
+            <div class="faq-header-col">
+                <div class="sticky-faq-header">
+                    <span class="heading-overline">Clarifications</span>
+                    <h2 class="massive-title-sm">Common<br>Inquiries.</h2>
+                    <p>Everything you need to know about migrating your support team, omnichannel routing, and pricing.
+                    </p>
+                </div>
+            </div>
+
+            <div class="faq-list-col">
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How hard is it to migrate from legacy tools?</h3>
+                        <div class="faq-icon"><span></span><span></span></div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="answer-inner">
+                            <p>We built a zero-friction migration engine. Your historical tickets, customer profiles,
+                                and existing macros port over from platforms like Zendesk or Intercom in minutes, with
+                                zero data loss.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Does Stackly support omnichannel routing?</h3>
+                        <div class="faq-icon"><span></span><span></span></div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="answer-inner">
+                            <p>Yes. Email, live chat, social media DMs, and SMS are all funneled into a single, unified
+                                agent workspace. We eliminate context-switching so your team can focus on the customer,
+                                not the platform.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How exactly does the AI triage work?</h3>
+                        <div class="faq-icon"><span></span><span></span></div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="answer-inner">
+                            <p>Our system automatically categorizes incoming tickets, analyzes user sentiment, and
+                                drafts suggested responses before an agent even opens the thread. It handles the
+                                repetitive work so humans can handle the empathy.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What kind of analytics do managers get?</h3>
+                        <div class="faq-icon"><span></span><span></span></div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="answer-inner">
+                            <p>While we optimize heavily for the agent experience, managers get clean, real-time
+                                dashboards tracking first-response times (FRT), resolution rates, and CSAT scores,
+                                without the bloated, confusing reporting modules of legacy tools.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section class="section-main" id="contact" style="padding-bottom: 0;">
+        <div class="cta-wrapper" data-aos="zoom-in" data-aos-duration="800">
+            <div class="cta-content">
+                <h2>Ready to transform your <br>support workflow?</h2>
+                <p>Join thousands of high-performance teams already using Stackly to resolve tickets faster and keep
+                    customers happier.</p>
+
+                <div class="cta-actions">
+                    <a href="404page.html" class="btn btn-secondary"
+                        style="background-color: var(--color-surface); color: var(--color-brand); font-size: 1.1rem; padding: 1rem 2.5rem;">Start
+                        your free trial</a>
+                    <a href="404page.html" class="btn btn-ghost"
+                        style="color: var(--color-surface); border-color: rgba(255,255,255,0.3); font-size: 1.1rem; padding: 1rem 2.5rem;">Contact
+                        Sales</a>
+                </div>
+                <p class="cta-subtext">14-day free trial. No credit card required.</p>
+            </div>
+
+            <div class="cta-shape shape-1"></div>
+            <div class="cta-shape shape-2"></div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo"> <img src="./assets/Stackly-logo-Blue.webp" alt="Logo"
+                            loading="lazy">
+                        </span></a>
+                    <p>The premium ticketing tool designed for modern, high-volume support teams.</p>
+                    <div class="social-links">
+                        <a href="404page.html"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="404page.html"><i class="fa-brands fa-github"></i></a>
+                        <a href="404page.html"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="404page.html">Blog</a></li>
+                        <li><a href="404page.html">Help Center</a></li>
+                        <li><a href="404page.html">API Documentation</a></li>
+                        <li><a href="404page.html">Community</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="404page.html">Privacy Policy</a></li>
+                        <li><a href="404page.html">Terms of Service</a></li>
+                        <li><a href="404page.html">Security</a></li>
+                        <li><a href="404page.html">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Stackly Inc. All rights reserved.</p>
+                <div class="status-indicator">
+                    <span class="status-dot"></span> All systems operational
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.34/dist/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const tl = gsap.timeline();
+
+
+            tl.from(".glitch-line", {
+                opacity: 0,
+                filter: "blur(20px)",
+                scale: 1.1,
+                letterSpacing: "50px",
+                duration: 1.2,
+                ease: "power4.out",
+                stagger: 0.2
+            })
+
+                .from(".hero-subtext", { y: 20, opacity: 0, duration: 0.8 }, "-=0.6")
+
+                .from(".metric", {
+                    y: 30,
+                    opacity: 0,
+                    duration: 0.8,
+                    stagger: 0.15,
+                    ease: "power2.out"
+                }, "-=0.4");
+        });
+        document.addEventListener("DOMContentLoaded", () => {
+            const tl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: ".pipeline",
+                    start: "top 80%",
+                    end: "bottom 80%",
+                    scrub: true
+                }
+            });
+
+
+            tl.fromTo(".pipeline-line",
+                { height: "0%" },
+                { height: "100%", duration: 1, ease: "none" }
+            );
+
+
+            gsap.from(".step", {
+                opacity: 0,
+                x: 50,
+                stagger: 0.3,
+                scrollTrigger: {
+                    trigger: ".pipeline",
+                    start: "top 60%",
+                    toggleActions: "play none none reverse"
+                }
+            });
+        });
+
+
+
+        document.addEventListener("DOMContentLoaded", () => {
+
+
+            const panels = document.querySelectorAll('.acc-panel');
+
+            panels.forEach(panel => {
+                panel.addEventListener('mouseenter', () => {
+
+                    panels.forEach(p => p.classList.remove('active'));
+
+                    panel.classList.add('active');
+                });
+            });
+
+
+            gsap.from(".accordion-container", {
+                y: 100,
+                opacity: 0,
+                duration: 1.2,
+                ease: "power3.out",
+                scrollTrigger: {
+                    trigger: ".services-accordion-section",
+                    start: "top 75%",
+                    toggleActions: "play none none reverse"
+                }
+            });
+        });
+
+
+
+        document.addEventListener("DOMContentLoaded", () => {
+
+            const faqItems = document.querySelectorAll('.faq-item');
+
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                const answer = item.querySelector('.faq-answer');
+                const inner = item.querySelector('.answer-inner');
+
+
+                gsap.set(answer, { height: 0 });
+
+                question.addEventListener('click', () => {
+                    const isOpen = item.classList.contains('active');
+
+
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item && otherItem.classList.contains('active')) {
+                            otherItem.classList.remove('active');
+                            gsap.to(otherItem.querySelector('.faq-answer'), {
+                                height: 0,
+                                duration: 0.5,
+                                ease: "power3.inOut"
+                            });
+                        }
+                    });
+
+
+                    if (isOpen) {
+                        item.classList.remove('active');
+                        gsap.to(answer, { height: 0, duration: 0.5, ease: "power3.inOut" });
+                    } else {
+                        item.classList.add('active');
+
+                        gsap.to(answer, { height: inner.offsetHeight, duration: 0.5, ease: "power3.inOut" });
+                    }
+                });
+            });
+
+
+            gsap.from(".faq-item", {
+                y: 40,
+                opacity: 0,
+                duration: 0.8,
+                stagger: 0.1,
+                ease: "power2.out",
+                scrollTrigger: {
+                    trigger: ".faq-list-col",
+                    start: "top 80%",
+                    toggleActions: "play none none reverse"
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

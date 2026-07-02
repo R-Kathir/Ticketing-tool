@@ -1,0 +1,252 @@
+/* =========================================
+   LOGIN PAGE: COMPLETE CSS
+   ========================================= */
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #050505;
+}
+
+.auth-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.auth-card {
+    background: #ffffff;
+    width: 100%;
+    max-width: 480px;
+    padding: 4rem 3rem;
+    border-radius: 16px;
+    box-shadow: 0 24px 48px rgba(0, 0, 0, 0.4);
+    position: relative;
+    overflow: hidden;
+}
+
+.back-link {
+    display: flex;
+    color: #0b0b0b;
+    text-decoration: none;
+    font-size: 0.85rem;
+    margin-bottom: 2rem;
+    transition: color 0.3s;
+    align-items: center;
+    gap: 10px;
+    padding: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.249);
+    width: fit-content;
+    border-radius: 20px;
+    
+}
+
+.back-link span {
+    transition: all 0.4s ease;
+}
+
+.back-link:hover span {
+    transform: translateX(-6px);
+}
+
+.back-link:hover {
+    color: #000000;
+    border-color: #00ff48;
+}
+
+.back-link:hover span {
+    color: #00ff48;
+}
+
+.badge-outline {
+    display: inline-block;
+    padding: 0.3rem 0.8rem;
+    border: 1px solid #e5e5e5;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.auth-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.auth-header h2 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.03em;
+    color: #1a1a1a;
+}
+
+.auth-header p {
+    color: #666;
+    font-size: 0.95rem;
+}
+
+
+.role-selector {
+    position: relative;
+    display: flex;
+    background: #f1f1f1;
+    border-radius: 8px;
+    margin-bottom: 2.5rem;
+    padding: 4px;
+}
+
+.role-selector input[type="radio"] {
+    display: none;
+}
+
+.role-label {
+    flex: 1;
+    text-align: center;
+    padding: 0.75rem 0;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #888;
+    cursor: pointer;
+    z-index: 2;
+    transition: color 0.3s ease;
+}
+
+.role-slider {
+    position: absolute;
+    top: 4px;
+    bottom: 4px;
+    left: 4px;
+    width: calc(50% - 4px);
+    background: #ffffff;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+
+#roleAdmin:checked~.role-slider {
+    transform: translateX(100%);
+}
+
+#roleAgent:checked~.role-label[for="roleAgent"],
+#roleAdmin:checked~.role-label[for="roleAdmin"] {
+    color: #1a1a1a;
+}
+
+
+.form-group {
+    position: relative;
+    margin-bottom: 2.5rem;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.8rem 0;
+    border: none;
+    border-bottom: 1px solid #d1d1d1;
+    background: transparent;
+    font-size: 1rem;
+    color: #1a1a1a;
+    transition: border-color 0.3s ease;
+}
+
+.form-group label {
+    position: absolute;
+    top: 0.8rem;
+    left: 0;
+    font-size: 1rem;
+    color: #999;
+    pointer-events: none;
+    transition: 0.3s ease all;
+}
+
+.form-group input:focus~label,
+.form-group input:not(:placeholder-shown)~label {
+    top: -1rem;
+    font-size: 0.75rem;
+    color: #1a1a1a;
+    font-weight: 600;
+}
+
+.form-group input:focus {
+    border-bottom: 1px solid #1a1a1a;
+    outline: none;
+}
+
+
+.submit-btn-premium {
+    width: 100%;
+    padding: 1.2rem;
+    background: #1a1a1a;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-top: 1rem;
+}
+
+.submit-btn-premium:hover {
+    background: #333;
+}
+
+.form-feedback {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-align: center;
+    opacity: 0;
+    display: none;
+}
+
+.form-feedback.error {
+    display: block;
+    background: rgba(217, 48, 37, 0.1);
+    color: #d93025;
+}
+
+.form-feedback.success {
+    display: block;
+    background: rgba(30, 142, 62, 0.1);
+    color: #1e8e3e;
+}
+
+.auth-footer {
+    text-align: center;
+    margin-top: 2.5rem;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.auth-footer a {
+    color: #1a1a1a;
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+
+@media (max-width: 480px) {
+    .auth-card {
+        padding: 3rem 2rem;
+    }
+
+    .auth-header h2 {
+        font-size: 2rem;
+    }
+}
