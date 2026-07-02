@@ -9,9 +9,10 @@ body {
     background: #050505;
 }
 
-.logo{
+.logo {
     width: 130px;
 }
+
 .auth-section {
     min-height: 100vh;
     display: flex;
@@ -44,7 +45,7 @@ body {
     border: 1px solid rgba(0, 0, 0, 0.249);
     width: fit-content;
     border-radius: 20px;
-    
+
 }
 
 .back-link span {
@@ -247,4 +248,19 @@ body {
     .auth-header h2 {
         font-size: 2rem;
     }
+}
+
+.form-forget-pass {
+    text-align: end;
+}
+
+.form-forget-pass a {
+    text-decoration: none;
+    color: #333;
+    transition: all 0.4s ease;
+}
+
+.form-forget-pass a:hover {
+    text-decoration: underline;
+    color: #666;
 }
