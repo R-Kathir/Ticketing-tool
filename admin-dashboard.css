@@ -1,31 +1,18 @@
-/* =========================================
-   ADMIN DASHBOARD THEME (Deep Slate)
-   ========================================= */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-/* 1. The Color Palette Overrides */
+ 
 :root {
     --sidebar-width: 260px;
-
-    /* Dark Theme Colors */
     --bg-color: #0b0f19;
-    /* Deepest Slate */
     --surface-color: #111827;
-    /* Elevated Slate */
     --border-color: #1f2937;
-    /* Subtle borders */
-
-    /* Accents */
     --brand-color: #3b82f6;
-    /* Bright Technical Blue */
     --text-primary: #f9fafb;
-    /* High contrast white */
     --text-muted: #9ca3af;
-    /* Dimmed text */
 }
 
 body.admin-body {
@@ -37,7 +24,7 @@ body.admin-body {
     height: 100vh;
 }
 
-/* 2. Structural Elements (Same logic, new colors) */
+ 
 .sidebar {
     width: var(--sidebar-width);
     background: var(--surface-color);
@@ -119,7 +106,7 @@ body.admin-body {
     border-top: 1px solid var(--border-color);
 }
 
-/* 3. Main Workspace Area */
+ 
 .main-workspace {
     flex: 1;
     display: flex;
@@ -175,7 +162,7 @@ body.admin-body {
     font-size: 0.8rem;
 }
 
-/* 4. Grid System & Sections */
+ 
 .workspace-content {
     padding: 2rem;
 }
@@ -223,7 +210,7 @@ body.admin-body {
     grid-column: span 2;
 }
 
-/* Ensure mobile layout works just like the Agent version */
+ 
 .sidebar-overlay {
     display: none;
     position: fixed;
@@ -511,9 +498,6 @@ body.admin-body {
     color: var(--text-muted);
 }
 
-/* ==========================
-   HEADER PROFILE
-========================== */
 
 .header-profile {
     display: flex;
@@ -521,7 +505,7 @@ body.admin-body {
     gap: 1rem;
 }
 
-/* Notification */
+ 
 
 .header-icon {
     width: 44px;
@@ -552,7 +536,7 @@ body.admin-body {
     border-radius: 50%;
 }
 
-/* Profile */
+ 
 
 .profile-card {
     display: flex;
@@ -605,7 +589,7 @@ body.admin-body {
     color: var(--text-muted);
 }
 
-/* Responsive */
+ 
 
 @media (max-width:768px) {
 

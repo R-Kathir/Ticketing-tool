@@ -1,11 +1,8 @@
-/* =========================================
-   INTERACTIVE HERO SECTION (Dark Theme)
-   ========================================= */
 .hero-section {
     position: relative;
     padding: 8rem 5% 6rem;
     background-color: #0d0d0f;
-    
+
     color: var(--text-inverse);
     overflow: hidden;
     display: flex;
@@ -34,7 +31,7 @@
     z-index: 1;
     width: 100%;
     max-width: 1200px;
-    
+
     display: flex;
     gap: 20px;
 }
@@ -49,7 +46,7 @@
     line-height: 1.05;
     margin-bottom: 1.5rem;
     display: flex;
-    
+
     gap: 1rem;
     flex-wrap: wrap;
     color: var(--text-inverse);
@@ -59,7 +56,7 @@
     color: #a1a1a6;
     font-size: clamp(1.1rem, 2vw, 1.25rem);
     max-width: 650px;
-    
+
     margin: 20px 0;
 }
 
@@ -159,7 +156,7 @@
     width: 12px;
     height: 12px;
     background-color: #34d399;
-    
+
     border-radius: 50%;
     box-shadow: 0 0 0 0 rgba(52, 211, 153, 0.7);
     animation: pulse 2s infinite;
@@ -205,9 +202,6 @@
     }
 }
 
-/* =========================================
-   FEATURES / SERVICES GRID
-   ========================================= */
 .features-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -223,7 +217,7 @@
     align-items: flex-start;
     padding: 2.5rem 2rem;
     height: 100%;
-    
+
 }
 
 
@@ -234,7 +228,7 @@
     width: 56px;
     height: 56px;
     background-color: rgba(0, 113, 227, 0.1);
-    
+
     color: var(--color-brand);
     border-radius: 16px;
     margin-bottom: 1.5rem;
@@ -262,7 +256,7 @@
     line-height: 1.6;
     margin-bottom: 2rem;
     flex-grow: 1;
-    
+
 }
 
 
@@ -282,7 +276,7 @@
 
 .feature-link:hover .material-icons-outlined {
     transform: translateX(4px);
-    
+
 }
 
 
@@ -297,9 +291,6 @@
     }
 }
 
-/* =========================================
-   ABOUT / OVERVIEW SECTION
-   ========================================= */
 .about-container {
     max-width: 1200px;
     margin: 0 auto;
@@ -346,7 +337,7 @@
     color: var(--color-brand);
     font-size: 1.4rem;
     flex-shrink: 0;
-    
+
     margin-top: 2px;
 }
 
@@ -360,7 +351,7 @@
     position: relative;
     border-radius: var(--radius-lg);
     border: 1px solid rgba(0, 0, 0, 0.05);
-    
+
 }
 
 
@@ -402,7 +393,7 @@
         gap: 3rem;
     }
 
-    
+
     .about-content {
         order: 1;
     }
@@ -410,7 +401,7 @@
     .about-visual {
         order: 2;
         padding-left: 1rem;
-        
+
     }
 
     .floating-stat-card {
@@ -419,9 +410,6 @@
     }
 }
 
-/* =========================================
-   BLOG / UPDATES SECTION
-   ========================================= */
 .blog-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -433,9 +421,9 @@
 
 .blog-card {
     padding: 0;
-    
+
     overflow: hidden;
-    
+
     display: flex;
     flex-direction: column;
 }
@@ -457,7 +445,7 @@
 
 .blog-card:hover .blog-image {
     transform: scale(1.05);
-    
+
 }
 
 
@@ -466,7 +454,7 @@
     display: flex;
     flex-direction: column;
     flex-grow: 1;
-    
+
 }
 
 .blog-meta {
@@ -512,9 +500,6 @@
     }
 }
 
-/* =========================================
-   MODERN STICKY SCROLL 
-   ========================================= */
 .modern-sticky-section {
     padding: 8rem 5%;
     background-color: var(--bg-main);
@@ -528,13 +513,13 @@
     grid-template-columns: 1fr 1fr;
     gap: 5rem;
     align-items: start;
-    
+
 }
 
 .sticky-left {
     position: sticky;
     top: 120px;
-    
+
     height: calc(100vh - 150px);
     display: flex;
     flex-direction: column;
@@ -616,7 +601,7 @@
     position: relative;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
     min-height: 320px;
-    
+
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -770,10 +755,6 @@
     }
 }
 
-/* =========================================
-   PRICING SECTION
-   ========================================= */
-
 .billing-toggle-container {
     display: flex;
     align-items: center;
@@ -858,7 +839,7 @@
     max-width: 1100px;
     margin: 0 auto;
     align-items: center;
-    
+
 }
 
 .pricing-card {
@@ -979,9 +960,6 @@
     }
 }
 
-/* =========================================
-   HOVER-TO-REVEAL TYPOGRAPHY
-   ========================================= */
 .hover-reveal-section {
     padding: 10rem 5%;
     position: relative;
@@ -1027,18 +1005,18 @@
 
 .hover-image-cursor {
     position: fixed;
-    
+
     top: 0;
     left: 0;
     width: 350px;
     aspect-ratio: 4/3;
     pointer-events: none;
-    
+
     z-index: 1;
     opacity: 0;
     transform: translate(-50%, -50%) scale(0.8);
     transition: opacity 0.3s ease, transform 0.3s ease;
-    
+
     overflow: hidden;
     border-radius: var(--radius-md);
     box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);

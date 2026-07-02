@@ -1,6 +1,3 @@
-/* =========================================
-   DASHBOARD ARCHITECTURE (Minimalist SaaS)
-   ========================================= */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -14,7 +11,7 @@ body {
     overflow-x: hidden;
 }
 
-/* Variables */
+ 
 :root {
     --sidebar-width: 260px;
     --border-color: #e5e5e5;
@@ -23,15 +20,15 @@ body {
     --text-muted: #888;
 }
 
-/* Layout Grid */
+ 
 .dashboard-body {
     display: flex;
     height: 100vh;
     overflow: hidden;
-    /* Prevent body scroll, let workspace scroll */
+     
 }
 
-/* --- SIDEBAR --- */
+ 
 .sidebar {
     width: var(--sidebar-width);
     background: var(--surface-color);
@@ -98,7 +95,7 @@ body {
     border-top: 1px solid var(--border-color);
 }
 
-/* --- MAIN WORKSPACE --- */
+ 
 .main-workspace {
     flex: 1;
     display: flex;
@@ -121,7 +118,7 @@ body {
     position: relative;
 }
 
-/* Notification */
+ 
 
 .header-icon {
     width: 44px;
@@ -152,7 +149,7 @@ body {
     background: #ef4444;
 }
 
-/* Profile */
+ 
 
 .profile-card {
     display: flex;
@@ -208,7 +205,7 @@ body {
     transform: rotate(180deg);
 }
 
-/* Dropdown */
+ 
 
 .profile-dropdown {
     position: absolute;
@@ -269,7 +266,7 @@ body {
     color: #e53935 !important;
 }
 
-/* Mobile */
+ 
 
 @media(max-width:768px) {
 
@@ -330,7 +327,7 @@ body {
     color: var(--brand-color);
 }
 
-/* --- CONTENT VIEWS & 4-SECTION GRID --- */
+ 
 .workspace-content {
     padding: 2rem;
 }
@@ -339,7 +336,7 @@ body {
     display: none;
 }
 
-/* Hidden by default */
+ 
 .view-panel.active {
     display: block;
 }
@@ -359,7 +356,7 @@ body {
     margin-top: 0.5rem;
 }
 
-/* The 4-Section Layout */
+ 
 .dashboard-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -380,7 +377,7 @@ body {
     grid-column: span 2;
 }
 
-/* Makes a section wide */
+ 
 
 .section-head h3 {
     font-size: 1rem;
@@ -390,7 +387,7 @@ body {
     margin-bottom: 1rem;
 }
 
-/* --- COMPONENT STYLES (Tables, Cards, etc.) --- */
+ 
 .metric-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -486,7 +483,7 @@ body {
     background: #f9f9f9;
 }
 
-/* --- RESPONSIVE MOBILE --- */
+ 
 .sidebar-overlay {
     display: none;
     position: fixed;
@@ -537,17 +534,12 @@ body {
         display: none;
     }
 
-    /* Hide search on mobile header to save space */
+     
     .workspace-content {
         padding: 1rem;
     }
 }
 
-/* =========================================
-   ACTIVE QUEUE SPECIFIC STYLES
-   ========================================= */
-
-/* Filter Dropdowns */
 .filter-group {
     display: flex;
     flex-direction: column;
@@ -583,7 +575,7 @@ body {
     border-color: var(--brand-color);
 }
 
-/* Quick Details Pane */
+ 
 .badge-outline {
     padding: 0.2rem 0.6rem;
     border: 1px solid var(--border-color);
@@ -651,7 +643,7 @@ body {
     font-size: 0.85rem;
 }
 
-/* Enhanced Queue Table */
+ 
 .queue-table {
     width: 100%;
     border-collapse: collapse;
@@ -697,7 +689,7 @@ body {
     font-size: 0.8rem;
 }
 
-/* Macro Buttons */
+ 
 .macro-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -734,11 +726,6 @@ body {
     border-color: #fce8e6;
 }
 
-/* =========================================
-   CUSTOMER BASE SPECIFIC STYLES
-   ========================================= */
-
-/* Large Search & Filters */
 .customer-search-bar {
     display: flex;
     align-items: center;
@@ -797,7 +784,7 @@ body {
     color: #d93025;
 }
 
-/* Contact List */
+ 
 .contact-list {
     list-style: none;
     display: flex;
@@ -817,7 +804,7 @@ body {
     gap: 1rem;
 }
 
-/* Online Indicator Dot */
+ 
 .avatar-small {
     position: relative;
 }
@@ -856,7 +843,7 @@ body {
     color: var(--brand-color);
 }
 
-/* Health Progress Bars */
+ 
 .health-metrics {
     display: flex;
     flex-direction: column;
@@ -905,7 +892,7 @@ body {
     background: #d93025;
 }
 
-/* Text Utilities */
+ 
 .text-muted {
     color: var(--text-muted);
     font-size: 0.85rem;
@@ -1010,7 +997,7 @@ body {
     margin: 1rem 0;
 }
 
-/* Toggle Switch */
+ 
 
 .switch {
     position: relative;

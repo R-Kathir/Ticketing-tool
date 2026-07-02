@@ -17,7 +17,7 @@
     margin-bottom: 4rem;
 }
 
-.glitch-title{
+.glitch-title {
     color: var(--text-inverse);
 }
 
@@ -92,9 +92,6 @@
     margin: 0.5rem 0;
 }
 
-/* =========================================
-   SERVICES: EXPANDING ACCORDION
-   ========================================= */
 .services-accordion-section {
     padding: 8rem 5%;
     background-color: #050505;
@@ -107,7 +104,7 @@
     width: 100%;
     max-width: 1400px;
     height: 60vh;
-    
+
     min-height: 500px;
     margin: 4rem auto 0;
     gap: 1rem;
@@ -117,7 +114,7 @@
 .acc-panel {
     position: relative;
     flex: 1;
-    
+
     border-radius: var(--radius-lg);
     background-size: cover;
     background-position: center;
@@ -128,7 +125,7 @@
 
 .acc-panel.active {
     flex: 5;
-    
+
 }
 
 
@@ -206,7 +203,7 @@
     opacity: 1;
     transform: translateY(0);
     transition-delay: 0.3s;
-    
+
 }
 
 
@@ -218,15 +215,12 @@
 
     .acc-vertical-title {
         transform: translateX(-50%) rotate(0deg);
-        
+
         left: 2rem;
         transform: none;
     }
 }
 
-/* =========================================
-   SERVICES: CASE STUDY (STICKY SPLIT)
-   ========================================= */
 .case-study-section {
     padding: 10rem 5%;
     background-color: #ffffff;
@@ -253,7 +247,7 @@
     max-width: 1400px;
     margin: 0 auto;
     align-items: start;
-    
+
 }
 
 .visual-column {
@@ -265,7 +259,7 @@
 .sticky-visual-wrapper {
     position: sticky;
     top: 15vh;
-    
+
     height: 70vh;
     border-radius: var(--radius-lg);
     overflow: hidden;
@@ -298,9 +292,9 @@
     display: flex;
     flex-direction: column;
     gap: 8rem;
-    
+
     padding-bottom: 10vh;
-    
+
 }
 
 .case-block {
@@ -337,7 +331,7 @@
 
     .sticky-visual-wrapper {
         position: relative;
-        
+
         top: 0;
         height: 50vh;
     }
@@ -347,15 +341,14 @@
         padding-bottom: 0;
     }
 }
+
 @media (max-width:768px) {
     .visual-column {
         position: relative;
         margin-bottom: 40px;
     }
 }
-/* =========================================
-   SERVICES: SPLIT-STANCE FAQ
-   ========================================= */
+
 .faq-section {
     padding: 10rem 5%;
     background-color: #fcfcfc;
@@ -465,14 +458,14 @@
 
 .faq-answer {
     height: 0;
-    
+
     overflow: hidden;
 }
 
 .answer-inner {
     padding-bottom: 2.5rem;
     padding-left: 2rem;
-    
+
     max-width: 600px;
 }
 
@@ -498,7 +491,7 @@
         padding-left: 1rem;
     }
 
-    
+
     .answer-inner {
         padding-left: 1rem;
     }

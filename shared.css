@@ -65,10 +65,6 @@ body {
     overflow-x: hidden;
 }
 
-/* =========================================
-   CUSTOM SCROLLBAR
-   ========================================= */
-
 html {
     scrollbar-width: thin;
     scrollbar-color: var(--text-secondary) var(--bg-main);
@@ -171,9 +167,6 @@ a:hover {
     color: var(--color-brand-hover);
 }
 
-/* =========================================
-   4. LAYOUT & BACKGROUND UTILITIES
-   ========================================= */
 .section-main {
     background-color: var(--bg-main);
     padding: 4rem 5%;
@@ -199,11 +192,6 @@ a:hover {
 .section-dark p {
     color: var(--text-inverse);
 }
-
-/* =========================================
-   5. COMPONENT UTILITIES (Buttons, Cards, Img)
-   ========================================= */
-
 
 .img-fluid {
     max-width: 100%;
@@ -309,9 +297,6 @@ a:hover {
     border-color: rgba(0, 0, 0, 0.08);
 }
 
-/* =========================================
-   6. SECTION HEADINGS
-   ========================================= */
 .section-heading {
     margin-bottom: 2.5rem;
     max-width: 800px;
@@ -346,26 +331,15 @@ a:hover {
     line-height: 1.6;
 }
 
-
-
-
-
-
-
 .section-dark .heading-overline {
     color: #66b2ff;
-
 }
 
 .section-dark .heading-desc {
     color: #a1a1a6;
-
 }
 
 
-/* =========================================
-   7. CHIPS / TAGS
-   ========================================= */
 .chip {
     display: inline-flex;
     align-items: center;
@@ -432,11 +406,6 @@ a.chip:hover {
     border: 1px solid var(--text-secondary);
 }
 
-/* =========================================
-   8. TEXT HIGHLIGHT UTILITIES
-   ========================================= */
-
-
 .text-highlight {
     background-color: rgba(0, 113, 227, 0.12);
 
@@ -464,10 +433,6 @@ a.chip:hover {
     font-family: monospace;
 
 }
-
-/* ===================================
-   HEADER
-=================================== */
 
 .header {
     position: fixed;
@@ -566,7 +531,7 @@ a.chip:hover {
 
 }
 
-/* ========= MOBILE ========= */
+ 
 
 @media(max-width:768px) {
 
@@ -786,9 +751,6 @@ a.chip:hover {
     font-size: 0.95rem;
 }
 
-/* =========================================
-   CALL TO ACTION (CTA) SECTION
-   ========================================= */
 .cta-wrapper {
     max-width: 1200px;
     margin: 0 auto;
@@ -864,9 +826,6 @@ a.chip:hover {
     right: -50px;
 }
 
-/* =========================================
-   FOOTER
-   ========================================= */
 .footer {
     background-color: var(--bg-main);
     padding: 6rem 5% 2rem;
@@ -884,7 +843,7 @@ a.chip:hover {
 
 .footer-grid {
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1fr;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1.5fr;
     gap: 4rem;
     margin-bottom: 4rem;
 }
@@ -968,6 +927,41 @@ a.chip:hover {
     box-shadow: 0 0 0 2px rgba(52, 211, 153, 0.2);
 }
 
+ 
+.location-details p,
+.location-details a {
+    display: flex;
+    align-items: flex-start;
+     
+    gap: 0.8rem;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0;
+    text-decoration: none;
+}
+
+.location-details a {
+    transition: color var(--transition-fast);
+}
+
+.location-details a:hover {
+    color: var(--color-brand);
+}
+
+.location-details a:hover .icon {
+    color: var(--color-brand);
+     
+}
+
+ 
+.location-details .icon {
+    font-size: 1.25rem;
+     
+    margin-top: 2px;
+    color: var(--text-secondary);
+    transition: color var(--transition-fast);
+}
 
 @media (max-width: 991px) {
     .footer-grid {
@@ -1010,9 +1004,6 @@ a.chip:hover {
 }
 
 
-/* =========================================
-   LENIS SMOOTH SCROLL BASE
-   ========================================= */
 html.lenis,
 html.lenis body {
     height: auto;

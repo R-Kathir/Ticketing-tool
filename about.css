@@ -1,12 +1,9 @@
-/* =========================================
-   ABOUT PAGE: KINETIC HERO (SECTION 1)
-   ========================================= */
 .about-hero-kinetic {
     position: relative;
     height: 100vh;
     min-height: 700px;
     background-color: #0a0a0c;
-    
+
     color: var(--text-inverse);
     display: flex;
     flex-direction: column;
@@ -14,7 +11,7 @@
     justify-content: center;
     overflow: hidden;
     perspective: 1000px;
-    
+
 }
 
 .ambient-glow {
@@ -63,16 +60,16 @@
 
 .kinetic-text .line {
     overflow: hidden;
-    
+
     display: block;
     padding-bottom: 0.1em;
-    
+
 }
 
 .kinetic-text .word {
     display: inline-block;
     transform: translateY(110%);
-    
+
     will-change: transform;
 }
 
@@ -132,18 +129,15 @@
     }
 }
 
-/* =========================================
-   ABOUT PAGE: SCRUB MISSION (SECTION 2)
-   ========================================= */
 .scrub-mission-section {
     padding: 12rem 5%;
     background-color: #0a0a0c;
-    
+
     display: flex;
     align-items: center;
     justify-content: center;
     min-height: 90vh;
-    
+
 }
 
 .mission-container {
@@ -153,7 +147,7 @@
 
 .scrub-text {
     font-size: clamp(2.5rem, 5vw, 4.5rem);
-    
+
     line-height: 1.25;
     font-family: var(--font-heading);
     font-weight: 600;
@@ -165,14 +159,14 @@
 .scrub-text .word {
     display: inline-block;
     margin-right: 0.25em;
-    
+
     padding-bottom: 0.1em;
 
-    
+
     background: linear-gradient(90deg, #ffffff 50%, rgba(255, 255, 255, 0.15) 50%);
     background-size: 200% 100%;
     background-position: 100% 0;
-    
+
 
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
